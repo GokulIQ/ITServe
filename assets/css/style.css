@@ -331,6 +331,15 @@ img {
     outline-offset: 2px;
 }
 
+/* Bootstrap's default toggler artwork has a dark stroke. Supply a readable
+   stroke when the shared navigation is displayed on a dark surface. */
+[data-theme="dark"] #site-header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23eef5ff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] #site-header .navbar-toggler:focus-visible {
+    box-shadow: 0 0 0 .2rem rgba(59, 130, 246, .45);
+}
+
 @media (min-width: 992px) {
     .navbar .nav-item.dropdown:hover > .dropdown-menu,
     .navbar .nav-item.dropdown:focus-within > .dropdown-menu {
