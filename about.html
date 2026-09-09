@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itserve_theme') || localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        const isRTL = localStorage.getItem('itserve_direction') === 'rtl' || (!localStorage.getItem('itserve_direction') && localStorage.getItem('itSupportRTL') === 'true');
+        if(isRTL) { document.documentElement.setAttribute('dir', 'rtl'); document.documentElement.setAttribute('lang', 'ar'); }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <!-- Page Header -->
+    <section class="bg-primary bg-opacity-10 py-5">
+        <div class="container py-4 text-center">
+            <h1 class="fw-bolder mb-3">About ITServe</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Team" class="img-fluid rounded-4 shadow-lg">
+                        <div class="position-absolute glass-card p-4 rounded-3 text-center" style="bottom: -20px; right: -20px;">
+                            <h2 class="text-primary fw-bolder mb-0">15+</h2>
+                            <p class="mb-0 fw-medium small">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <span class="text-primary fw-bold text-uppercase tracking-wide">Who We Are</span>
+                    <h2 class="mt-2 mb-4">Your Trusted Partner in IT Infrastructure</h2>
+                    <p class="text-secondary mb-4">Founded in 2011, ITServe has grown into a leading provider of IT support, hardware maintenance, and network solutions. We bridge the gap between complex technology and business efficiency.</p>
+                    
+                    <div class="row g-4 mt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-3">
+                                <div class="text-primary fs-3"><i class="bi bi-bullseye"></i></div>
+                                <div>
+                                    <h5 class="fw-bold mb-2">Our Mission</h5>
+                                    <p class="text-muted small mb-0">To provide fast, reliable, and secure IT solutions that empower businesses to operate without technical friction.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-3">
+                                <div class="text-primary fs-3"><i class="bi bi-eye"></i></div>
+                                <div>
+                                    <h5 class="fw-bold mb-2">Our Vision</h5>
+                                    <p class="text-muted small mb-0">To become the most trusted and transparent managed IT service provider globally.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-5 bg-surface border-top border-bottom">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <h2 class="display-5 fw-bold text-primary mb-1">5k+</h2>
+                    <p class="text-secondary fw-medium mb-0">Computers Repaired</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="display-5 fw-bold text-primary mb-1">200+</h2>
+                    <p class="text-secondary fw-medium mb-0">Active AMC Clients</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="display-5 fw-bold text-primary mb-1">45+</h2>
+                    <p class="text-secondary fw-medium mb-0">Certified Engineers</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="display-5 fw-bold text-primary mb-1">99%</h2>
+                    <p class="text-secondary fw-medium mb-0">Client Retention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase">The Experts</span>
+                <h2 class="mt-2">Meet Our Leadership Team</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card text-center overflow-hidden h-100">
+                        <img src="./assets/images/David Chen.jpg" alt="CEO" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">David Chen</h5>
+                            <p class="text-primary small fw-medium mb-3">CEO & Founder</p>
+                            <p class="text-muted small">20+ years of IT infrastructure experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card text-center overflow-hidden h-100">
+                        <img src="./assets/images/Chief Technology Officer.jpg" alt="CTO" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Sarah Jenkins</h5>
+                            <p class="text-primary small fw-medium mb-3">Chief Technology Officer</p>
+                            <p class="text-muted small">Cybersecurity and network architecture expert.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card text-center overflow-hidden h-100">
+                        <img src="./assets/images/Head of IT Support.jpg" alt="Manager" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Michael Ross</h5>
+                            <p class="text-primary small fw-medium mb-3">Head of IT Support</p>
+                            <p class="text-muted small">Leads our 24/7 emergency response team.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="glass-card text-center overflow-hidden h-100">
+                        <img src="./assets/images/Lead Network Engineer.jpg" alt="Lead Engineer" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold mb-1">Emily Davis</h5>
+                            <p class="text-primary small fw-medium mb-3">Lead Network Engineer</p>
+                            <p class="text-muted small">Specializes in enterprise LAN/WAN setups.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

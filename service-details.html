@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <!-- Page Header -->
+    <section class="bg-primary bg-opacity-10 py-5">
+        <div class="container py-4 text-center">
+            <h1 class="fw-bolder mb-3" id="sd-hero-title">Service Details</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none">Services</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="sd-breadcrumb">Service Details</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8" id="sd-main-content">
+                    <img id="sd-image" src="" alt="Service Image" class="img-fluid rounded-4 shadow-sm mb-4" style="height: 400px; width: 100%; object-fit: cover; display: none;">
+                    
+                    <h2 class="fw-bolder mb-4" id="sd-title"></h2>
+                    <div id="sd-description"></div>
+                    
+                    <h4 class="fw-bold mb-3">Key Features</h4>
+                    <div class="row g-4 mb-5" id="sd-features"></div>
+
+                    
+                    <h4 class="fw-bold mb-3 d-none" id="sd-benefits-heading">Benefits</h4>
+                    <div class="row g-4 mb-5" id="sd-benefits"></div>
+
+                    <h4 class="fw-bold mb-3">Our Process</h4>
+                    <div class="timeline mb-5" id="sd-process"></div>
+                    
+                    <h4 class="fw-bold mb-3">Frequently Asked Questions</h4>
+                    <div class="accordion mb-5" id="serviceFaq"></div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4" id="sd-sidebar">
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="fw-bold mb-4 border-bottom pb-2">Service Details</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between mb-3 border-bottom pb-2">
+                                <span class="text-muted">Starting Price</span>
+                                <span class="fw-bold" id="sd-price"></span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-3 border-bottom pb-2">
+                                <span class="text-muted">Time Required</span>
+                                <span class="fw-bold" id="sd-duration"></span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-3">
+                                <span class="text-muted">Availability</span>
+                                <span class="fw-bold text-success" id="sd-availability"></span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-100 mt-3 fw-bold">Book This Service</a>
+                    </div>
+                    
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="fw-bold mb-3 border-bottom pb-2">More Services</h5>
+                        <ul class="list-unstyled mb-0" id="sd-related-services"></ul>
+                    </div>
+                    
+                    <div class="glass-card bg-primary text-white p-4 text-center">
+                        <i class="bi bi-telephone-fill fs-1 mb-3"></i>
+                        <h5 class="fw-bold mb-2 text-white">Need Urgent Help?</h5>
+                        <p class="small text-white-50 mb-4">Our emergency team is available 24/7 for network downtime.</p>
+                        <a href="emergency-support.html" class="btn btn-light text-primary fw-bold w-100">Call Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+<script src="assets/js/service-details.js"></script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Support - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <section class="bg-danger py-5 position-relative overflow-hidden">
+        <div class="position-absolute opacity-10" style="right: -10%; top: -50%;">
+            <i class="bi bi-exclamation-triangle-fill text-white" style="font-size: 30rem;"></i>
+        </div>
+        <div class="container py-5 text-center text-white position-relative z-1">
+            <div class="badge bg-white text-danger px-3 py-2 rounded-pill mb-3 fw-bold">24/7 Priority Assistance</div>
+            <h1 class="display-4 fw-bolder mb-3 text-white">IT Emergency Support</h1>
+            <p class="lead mb-5 text-white-50">Business down? Server crashed? Network failure? We are here to get you back online instantly.</p>
+            
+            <div class="glass-card bg-white bg-opacity-10 border-white border-opacity-25 p-4 d-inline-block rounded-4 shadow-lg backdrop-blur">
+                <p class="text-white-50 small text-uppercase fw-bold mb-2">Call Direct Hotline</p>
+                <h2 class="display-5 fw-bolder text-white mb-0"><i class="bi bi-telephone-fill me-2 fs-3 text-white"></i> 1-800-999-EMERG</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-surface">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bolder mb-4">Request Immediate Callback</h2>
+                    <p class="text-secondary mb-4">Fill out this high-priority ticket form and our on-call engineer will contact you within 15 minutes.</p>
+                    
+                    <form id="emergencyForm" class="needs-validation" novalidate>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Full Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Phone Number *</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Company Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Nature of Emergency *</label>
+                            <select class="form-select" required>
+                                <option value="">Select Issue</option>
+                                <option>Server Down</option>
+                                <option>Network Down / No Internet</option>
+                                <option>Data Loss / Ransomware</option>
+                                <option>Critical Hardware Failure</option>
+                                <option>Other Critical Issue</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">Brief Description *</label>
+                            <textarea class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-lg w-100 fw-bold shadow">Submit Emergency Ticket</button>
+                    </form>
+                </div>
+                
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="glass-card p-4 border-danger border-opacity-25 bg-danger bg-opacity-10 mb-4">
+                        <h5 class="fw-bold text-danger mb-3">Emergency Workflow</h5>
+                        <div class="d-flex mb-3 gap-3">
+                            <div class="text-danger fw-bold fs-5">01</div>
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Submit Request / Call</h6>
+                                <p class="small text-muted mb-0">Use the form or call the hotline.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3 gap-3">
+                            <div class="text-danger fw-bold fs-5">02</div>
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">15-Min Response</h6>
+                                <p class="small text-muted mb-0">Engineer assesses the situation over phone.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3 gap-3">
+                            <div class="text-danger fw-bold fs-5">03</div>
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Remote/On-Site Action</h6>
+                                <p class="small text-muted mb-0">Immediate remote fix or dispatch engineer.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="text-danger fw-bold fs-5">04</div>
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark">Resolution</h6>
+                                <p class="small text-muted mb-0">System restored and root cause analyzed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-4">
+                        <h5 class="fw-bold mb-3">Emergency Pricing</h5>
+                        <p class="small text-secondary mb-3">Emergency services are billed at premium rates due to priority scheduling and off-hours support.</p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                                <span class="text-muted">Business Hours</span>
+                                <span class="fw-bold">₹1,499 / hr</span>
+                            </li>
+                            <li class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                                <span class="text-muted">After Hours / Weekends</span>
+                                <span class="fw-bold">₹2,999 / hr</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span class="text-muted">AMC Clients</span>
+                                <span class="fw-bold text-success">Included in Plan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('emergencyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(this.checkValidity()) {
+                showToast('Emergency ticket logged. Please stay near your phone, an engineer will call shortly.', 'danger');
+                this.reset();
+            } else {
+                this.classList.add('was-validated');
+            }
+        });
+    </script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

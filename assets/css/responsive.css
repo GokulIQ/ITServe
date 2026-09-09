@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: var(--surface-solid);
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        margin-top: 1rem;
+        border: 1px solid var(--border-color);
+    }
+    
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding-top: 2rem;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .footer-col {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* Header Mobile Constraints */
+@media (max-width: 991.98px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-inline: 16px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    
+    /* Ensure action group doesn't overflow */
+    .navbar-collapse .nav-actions {
+        flex-wrap: wrap;
+        gap: 10px !important;
+        justify-content: flex-start;
+    }
+
+    .navbar-collapse .navbar-nav { padding-bottom: .5rem; }
+    .navbar-collapse .nav-link { padding-inline: .5rem !important; }
+    .navbar-collapse .dropdown-menu.header-dropdown {
+        position: static;
+        width: 100%;
+        margin: .25rem 0 .5rem;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand span {
+        font-size: 1.25rem;
+    }
+    
+    /* Ensure buttons fit in screen */
+    .btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}

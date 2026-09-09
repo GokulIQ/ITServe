@@ -1,0 +1,8 @@
+/* Fix text-dark utility in dark mode */
+[data-theme="dark"] .text-dark {
+    color: var(--text-primary) !important;
+}
+[data-theme="dark"] a.text-dark:hover,
+[data-theme="dark"] a.text-dark:focus {
+    color: var(--primary-color) !important;
+}

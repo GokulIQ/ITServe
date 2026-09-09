@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - IT Support</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <script>const savedTheme = localStorage.getItem('itSupportTheme'); if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body class="bg-surface">
+    <header id="site-header" aria-label="Main navigation"></header>
+    <div class="container text-center py-5">
+        <a class="navbar-brand d-inline-block mb-5" href="index.html">
+            <i class="bi bi-cpu text-primary fs-2"></i> <span class="fs-3 fw-bold text-dark">IT<span class="text-secondary">Serve</span></span>
+        </a>
+        <h1 class="display-4 fw-bolder mb-3">Something Awesome is Coming</h1>
+        <p class="text-secondary mb-5">We are currently working hard on this page. We'll be here soon.</p>
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-auto">
+                <div class="d-flex gap-3 justify-content-center" id="countdown">
+                    <div class="glass-card p-3 text-center" style="width: 80px;">
+                        <h3 class="fw-bold text-primary mb-0" id="days">14</h3>
+                        <span class="small text-muted">Days</span>
+                    </div>
+                    <div class="glass-card p-3 text-center" style="width: 80px;">
+                        <h3 class="fw-bold text-primary mb-0" id="hours">08</h3>
+                        <span class="small text-muted">Hours</span>
+                    </div>
+                    <div class="glass-card p-3 text-center" style="width: 80px;">
+                        <h3 class="fw-bold text-primary mb-0" id="minutes">45</h3>
+                        <span class="small text-muted">Mins</span>
+                    </div>
+                    <div class="glass-card p-3 text-center" style="width: 80px;">
+                        <h3 class="fw-bold text-primary mb-0" id="seconds">12</h3>
+                        <span class="small text-muted">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <form id="notifyForm" class="d-flex gap-2">
+                    <input type="email" class="form-control" placeholder="Email Address" required>
+                    <button class="btn btn-primary px-4 fw-bold">Notify Me</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(this.checkValidity()) {
+                showToast('You will be notified when we launch!', 'success');
+                this.reset();
+            }
+        });
+        
+        // Simple countdown logic
+        setInterval(() => {
+            let s = parseInt(document.getElementById('seconds').innerText);
+            let m = parseInt(document.getElementById('minutes').innerText);
+            let h = parseInt(document.getElementById('hours').innerText);
+            
+            s--;
+            if(s < 0) { s = 59; m--; }
+            if(m < 0) { m = 59; h--; }
+            if(h < 0) { h = 23; }
+            
+            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+        }, 1000);
+    </script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

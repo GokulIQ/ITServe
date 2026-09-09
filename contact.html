@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <section class="bg-primary bg-opacity-10 py-5">
+        <div class="container py-4 text-center">
+            <h1 class="fw-bolder mb-3">Get in Touch</h1>
+            <p class="text-secondary mb-0">Have a question or need support? We're here to help.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="fw-bolder mb-4">Contact Information</h2>
+                    <p class="text-secondary mb-5">Our technical team is available to answer your questions and resolve your IT issues promptly.</p>
+                    
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="icon-box bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="bi bi-geo-alt fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Our Location</h5>
+                            <p class="text-muted mb-0">123 Tech Park, Innovation City<br>NY 10001, United States</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="icon-box bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="bi bi-envelope fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Email Us</h5>
+                            <p class="text-muted mb-0">support@itserve.com<br>info@itserve.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-4 mb-5">
+                        <div class="icon-box bg-primary-light text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="bi bi-telephone fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Call Us</h5>
+                            <p class="text-muted mb-0">+1 (800) 123-4567<br>+1 (800) 999-EMERG <span class="badge bg-danger ms-1">24/7</span></p>
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold mb-3">Business Hours</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="d-flex justify-content-between mb-2"><span>Monday - Friday:</span> <span class="fw-bold text-dark">9:00 AM - 6:00 PM</span></li>
+                        <li class="d-flex justify-content-between mb-2"><span>Saturday:</span> <span class="fw-bold text-dark">10:00 AM - 4:00 PM</span></li>
+                        <li class="d-flex justify-content-between mb-2"><span>Sunday:</span> <span class="fw-bold text-danger">Closed</span></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="glass-card p-4 p-md-5">
+                        <h3 class="fw-bold mb-4">Send us a Message</h3>
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Full Name *</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Email Address *</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Subject *</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold">Message *</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Placeholder -->
+            <div class="row mt-5 pt-5">
+                <div class="col-12">
+                    <div class="glass-card p-2 rounded-4">
+                        <div class="bg-light rounded-4 d-flex align-items-center justify-content-center text-muted" style="height: 400px;">
+                            <div class="text-center">
+                                <i class="bi bi-map fs-1 text-primary mb-2 d-block"></i>
+                                <h5>Interactive Map Integration Here</h5>
+                                <p class="small">Replace with Google Maps or Mapbox iframe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(this.checkValidity()) {
+                showToast('Thank you! Your message has been sent successfully.', 'success');
+                this.reset();
+                this.classList.remove('was-validated');
+            } else {
+                this.classList.add('was-validated');
+            }
+        });
+    </script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

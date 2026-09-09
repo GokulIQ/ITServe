@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Blog - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <section class="bg-primary bg-opacity-10 py-5">
+        <div class="container py-4 text-center">
+            <h1 class="fw-bolder mb-3">Tech Insights & News</h1>
+            <p class="text-secondary mb-0">Latest tips, trends, and updates from the IT world.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Featured Post -->
+                    <div class="glass-card mb-5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cybersecurity" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
+                        <div class="p-4 p-lg-5">
+                            <div class="d-flex gap-3 mb-3 text-muted small fw-medium">
+                                <span><i class="bi bi-calendar me-1 text-primary"></i> Aug 24, 2026</span>
+                                <span><i class="bi bi-person me-1 text-primary"></i> Admin</span>
+                                <span><i class="bi bi-tag me-1 text-primary"></i> Security</span>
+                            </div>
+                            <h2 class="fw-bold mb-3"><a href="blog-cybersecurity-practices.html" class="text-dark text-decoration-none">10 Essential Cybersecurity Practices for Small Businesses in 2026</a></h2>
+                            <p class="text-secondary mb-4">Cyber threats are evolving rapidly. Learn the most crucial steps you can take today to protect your company's sensitive data from ransomware and phishing attacks.</p>
+                            <a href="blog-cybersecurity-practices.html" class="btn btn-primary">Read Article</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Post List -->
+                    <div class="row g-4 mb-5" id="blogContainer">
+                        <div class="col-md-6 blog-item" data-category="network">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column">
+                                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Network" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="text-primary small fw-bold mb-2">Network</div>
+                                    <h5 class="fw-bold mb-3"><a href="blog-wifi-7-open-offices.html" class="text-dark text-decoration-none">Why Wi-Fi 7 is a Game Changer for Open Offices</a></h5>
+                                    <p class="text-secondary small mb-4">Explore how the latest Wi-Fi standard dramatically improves connectivity in high-density environments.</p>
+                                    <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small">Aug 15, 2026</span>
+                                        <a href="blog-wifi-7-open-offices.html" class="text-primary fw-bold text-decoration-none small">Read More <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 blog-item" data-category="hardware">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column">
+                                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hardware" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="text-primary small fw-bold mb-2">Hardware</div>
+                                    <h5 class="fw-bold mb-3"><a href="blog-ssd-vs-nvme.html" class="text-dark text-decoration-none">SSD vs NVMe: Which Upgrade is Right for You?</a></h5>
+                                    <p class="text-secondary small mb-4">A detailed breakdown of storage options and how they impact your workstation's daily performance.</p>
+                                    <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small">Aug 02, 2026</span>
+                                        <a href="blog-ssd-vs-nvme.html" class="text-primary fw-bold text-decoration-none small">Read More <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 blog-item" data-category="cloud">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column">
+                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cloud" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="text-primary small fw-bold mb-2">Cloud Services</div>
+                                    <h5 class="fw-bold mb-3"><a href="blog-cloud-migration-costs.html" class="text-dark text-decoration-none">The Hidden Costs of Cloud Migration</a></h5>
+                                    <p class="text-secondary small mb-4">Moving to the cloud isn't always cheaper. Here is what you need to consider before making the jump.</p>
+                                    <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small">Jul 28, 2026</span>
+                                        <a href="blog-cloud-migration-costs.html" class="text-primary fw-bold text-decoration-none small">Read More <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 blog-item" data-category="backup">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column">
+                                <img src="assets/images/Data Backup &amp; Recovery.jpg" alt="Data backup and recovery" class="img-fluid" style="height: 200px; object-fit: cover;">
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="text-primary small fw-bold mb-2">Business Continuity</div>
+                                    <h5 class="fw-bold mb-3"><a href="blog-backup-disaster-recovery.html" class="text-dark text-decoration-none">A Practical Backup and Disaster Recovery Plan for Growing Teams</a></h5>
+                                    <p class="text-secondary small mb-4">The essential recovery targets, backup layers, and testing habits that keep an outage from becoming a crisis.</p>
+                                    <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                                        <span class="text-muted small">Sep 03, 2026</span>
+                                        <a href="blog-backup-disaster-recovery.html" class="text-primary fw-bold text-decoration-none small">Read More <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <!-- <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a class="page-link border-0 shadow-sm mx-1 rounded-3" href="#" tabindex="-1">Previous</a></li>
+                            <li class="page-item active"><a class="page-link border-0 shadow-sm mx-1 rounded-3" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link border-0 shadow-sm mx-1 rounded-3" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link border-0 shadow-sm mx-1 rounded-3" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link border-0 shadow-sm mx-1 rounded-3" href="#">Next</a></li>
+                        </ul>
+                    </nav> -->
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="fw-bold mb-3">Search</h5>
+                        <form class="d-flex" id="searchForm">
+                            <input type="text" class="form-control me-2" placeholder="Search articles...">
+                            <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                    
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="fw-bold mb-3">Categories</h5>
+                        <ul class="list-unstyled mb-0" id="categoryFilter">
+                            <li class="mb-2"><a href="#" class="text-decoration-none d-flex justify-content-between text-primary fw-bold" data-filter="all">All Categories <span>(5)</span></a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none d-flex justify-content-between text-secondary hover-primary" data-filter="security">Cybersecurity <span>(4)</span></a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none d-flex justify-content-between text-secondary hover-primary" data-filter="hardware">Hardware <span>(3)</span></a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none d-flex justify-content-between text-secondary hover-primary" data-filter="network">Networking <span>(2)</span></a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none d-flex justify-content-between text-secondary hover-primary" data-filter="cloud">Cloud Services <span>(3)</span></a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none d-flex justify-content-between text-secondary hover-primary" data-filter="backup">Business Continuity <span>(1)</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass-card p-4">
+                        <h5 class="fw-bold mb-3">Recent Posts</h5>
+                        <div class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
+                            <div>
+                                <h6 class="mb-1 small fw-bold"><a href="blog-wifi-7-open-offices.html" class="text-dark text-decoration-none">Why Wi-Fi 7 is a Game Changer</a></h6>
+                                <span class="text-muted" style="font-size: 0.75rem;">Aug 15, 2026</span>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
+                            <div>
+                                <h6 class="mb-1 small fw-bold"><a href="blog-ssd-vs-nvme.html" class="text-dark text-decoration-none">SSD vs NVMe Upgrade</a></h6>
+                                <span class="text-muted" style="font-size: 0.75rem;">Aug 02, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple filter simulation
+        document.querySelectorAll('#categoryFilter a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // update active state
+                document.querySelectorAll('#categoryFilter a').forEach(a => {
+                    a.classList.remove('text-primary', 'fw-bold');
+                    a.classList.add('text-secondary');
+                });
+                this.classList.add('text-primary', 'fw-bold');
+                this.classList.remove('text-secondary');
+                
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.blog-item').forEach(item => {
+                    if(filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const val = this.querySelector('input').value.toLowerCase();
+            document.querySelectorAll('.blog-item').forEach(item => {
+                const title = item.querySelector('h5').innerText.toLowerCase();
+                if(title.includes(val)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

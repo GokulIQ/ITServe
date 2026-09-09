@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Dashboard Styles (Responsive & RTL Native)
+   ========================================================================== */
+
+.dashboard-wrapper { 
+    display: flex; 
+    min-height: 100vh; 
+    background-color: var(--bs-body-bg); 
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.sidebar { 
+    width: 280px; 
+    background: var(--bs-body-bg); 
+    border-inline-end: 1px solid var(--bs-border-color); 
+    transition: transform 0.3s ease; 
+    position: fixed; 
+    top: 0; 
+    bottom: 0; 
+    inset-inline-start: 0;
+    z-index: 1000; 
+    overflow-y: auto; 
+}
+
+.main-content { 
+    flex-grow: 1; 
+    margin-inline-start: 280px; 
+    transition: all 0.3s ease; 
+    width: calc(100% - 280px); 
+    max-width: 100%;
+}
+
+.sidebar-link { 
+    display: flex; 
+    align-items: center; 
+    padding: 12px 24px; 
+    color: var(--bs-secondary); 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: all 0.2s ease; 
+}
+
+.sidebar-link i { 
+    margin-inline-end: 12px; 
+    font-size: 1.1rem; 
+}
+
+.sidebar-link:hover, .sidebar-link.active { 
+    background: rgba(13, 110, 253, 0.08); 
+    color: var(--bs-primary); 
+    border-inline-start: 3px solid var(--bs-primary); 
+}
+
+.dash-header { 
+    background: var(--bs-body-bg); 
+    border-bottom: 1px solid var(--bs-border-color); 
+    padding: 15px 24px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 999; 
+}
+
+.chart-box { 
+    background: var(--bs-body-bg); 
+    border-radius: 12px; 
+    padding: 24px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    border: 1px solid var(--bs-border-color); 
+    height: 100%;
+}
+
+/* Dashboard Grid Component */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Specific component fixes for profile page etc */
+.profile-avatar-large { 
+    width: 100px; 
+    height: 100px; 
+    font-size: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    background: var(--bs-primary); 
+    color: white; 
+    font-weight: bold; 
+}
+
+.file-drop-area { 
+    border: 2px dashed var(--bs-border-color); 
+    border-radius: 8px; 
+    padding: 40px; 
+    text-align: center; 
+    background: rgba(13, 110, 253, 0.03); 
+    cursor: pointer; 
+    transition: all 0.2s; 
+}
+
+.file-drop-area:hover { 
+    border-color: var(--bs-primary); 
+    background: rgba(13, 110, 253, 0.08); 
+}
+
+/* Reports CSS Bar Chart */
+.css-bar-chart { display: flex; align-items: flex-end; height: 250px; gap: 20px; padding-top: 30px; }
+.css-bar { flex: 1; background: var(--bs-primary); border-radius: 6px 6px 0 0; position: relative; min-height: 5%; opacity: 0.9; transition: opacity 0.2s, height 0.5s ease-out; }
+.css-bar:hover { opacity: 1; background: var(--bs-info); }
+.css-bar span { position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-size: 12px; color: var(--bs-secondary); white-space: nowrap;}
+.css-bar small { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 14px; font-weight: bold; }
+.css-pie { width: 200px; height: 200px; border-radius: 50%; margin: 0 auto; position: relative; transition: background 0.3s; }
+.css-pie::after { content: ''; position: absolute; width: 130px; height: 130px; background: var(--bs-body-bg); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+/* Knowledge Base Cards */
+.kb-card { transition: transform 0.2s; cursor: pointer; }
+.kb-card:hover { transform: translateY(-5px); border-color: var(--bs-primary) !important; }
+
+/* Mobile Sidebar Fixes */
+@media (max-width: 991.98px) { 
+    .sidebar { 
+        transform: translateX(calc(-100% * var(--transform-dir, 1))); 
+    } 
+    html[dir="rtl"] .sidebar {
+        --transform-dir: -1;
+    }
+    .sidebar.show { 
+        transform: translateX(0); 
+    } 
+    .main-content { 
+        margin-inline-start: 0; 
+        width: 100%; 
+    } 
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .dashboard-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+}
+
+
+.stat-card {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--bs-body-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--bs-border-color);
+    height: 100%;
+}
+.stat-card > div:first-child {
+    flex: 1;
+    min-width: 0; /* Prevents text from breaking flexbox */
+}
+.stat-card p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}

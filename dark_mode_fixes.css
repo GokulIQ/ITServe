@@ -1,0 +1,252 @@
+
+/* ==========================================================================
+   COMPREHENSIVE DARK MODE OVERRIDES
+   Fixes all Bootstrap utility classes that don't respect dark theme
+   ========================================================================== */
+
+/* --- Table Dark Mode --- */
+[data-theme="dark"] .table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text-primary);
+    --bs-table-border-color: var(--border-color);
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.03);
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+    --bs-table-hover-color: var(--text-primary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table > :not(caption) > * > * {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .table > thead {
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Override table-light in dark mode (used on <thead>) */
+[data-theme="dark"] .table-light {
+    --bs-table-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-color: var(--text-secondary) !important;
+    --bs-table-border-color: var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .table-light th,
+[data-theme="dark"] .table-light td {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* Table hover rows in dark mode */
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-primary) !important;
+}
+
+/* --- bg-light & bg-white overrides --- */
+[data-theme="dark"] .bg-light {
+    background-color: var(--surface-solid) !important;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--surface-solid) !important;
+}
+
+/* --- btn-light override (action buttons) --- */
+[data-theme="dark"] .btn-light {
+    background-color: var(--surface-solid) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .btn-light:hover {
+    background-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* --- Modal Dark Mode --- */
+[data-theme="dark"] .modal-content {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-footer {
+    border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* --- Card Dark Mode --- */
+[data-theme="dark"] .card {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .card-footer {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top-color: var(--border-color);
+}
+
+/* --- Border overrides --- */
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border {
+    border-color: var(--border-color) !important;
+}
+
+/* --- Dropdown Dark Mode --- */
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-divider {
+    border-top-color: var(--border-color);
+}
+
+/* --- Pagination Dark Mode --- */
+[data-theme="dark"] .page-link {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-link:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+[data-theme="dark"] .page-item.disabled .page-link {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+/* --- bg-opacity sections (hero banners) --- */
+[data-theme="dark"] .bg-primary.bg-opacity-10 {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-primary.bg-opacity-10 h1,
+[data-theme="dark"] .bg-primary.bg-opacity-10 h2,
+[data-theme="dark"] .bg-primary.bg-opacity-10 h3,
+[data-theme="dark"] .bg-primary.bg-opacity-10 p {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .bg-primary.bg-opacity-10 .text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+/* --- List group Dark Mode --- */
+[data-theme="dark"] .list-group-item {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* --- Input group addon text --- */
+[data-theme="dark"] .input-group-text {
+    background-color: var(--surface-solid) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-muted) !important;
+}
+
+/* --- Chart Box (dashboard containers) --- */
+[data-theme="dark"] .chart-box {
+    background: var(--surface-solid);
+    border-color: var(--border-color);
+}
+
+/* --- Sidebar text-dark fixes for dashboard --- */
+[data-theme="dark"] .sidebar .text-dark,
+[data-theme="dark"] .sidebar .fw-bold.text-dark {
+    color: var(--text-primary) !important;
+}
+
+/* --- Contact page specific: glass-card background --- */
+[data-theme="dark"] .glass-card {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+/* --- Contact page icon boxes --- */
+[data-theme="dark"] .bg-primary-light {
+    background-color: var(--primary-light) !important;
+}
+
+/* --- form-label visibility --- */
+[data-theme="dark"] .form-label {
+    color: var(--text-primary);
+}
+
+/* --- Breadcrumb dark mode --- */
+[data-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--text-muted);
+}
+[data-theme="dark"] .breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* --- Toast dark mode --- */
+[data-theme="dark"] .toast {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* --- text-body override --- */
+[data-theme="dark"] .text-body {
+    color: var(--text-primary) !important;
+}
+
+/* --- Accordion --- */
+[data-theme="dark"] .accordion-item {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+[data-theme="dark"] .accordion-button {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+}
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}

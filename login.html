@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ITServe IT Support</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+    <script src="assets/js/app.js"></script>
+    <script>requireGuest();</script>
+</head>
+<body class="bg-surface position-relative">
+    <header id="site-header" aria-label="Main navigation"></header>
+
+    <div class="d-flex align-items-center min-vh-100 w-100">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="glass-card overflow-hidden rounded-4 border-0 shadow-lg">
+                        <div class="p-4 p-md-5">
+                            <div class="text-center mb-4">
+                                <a class="navbar-brand d-inline-block mb-3" href="index.html">
+                                    <i class="bi bi-cpu text-primary fs-3"></i> 
+                                    <span class="fs-4 fw-bold text-dark">IT<span class="text-secondary">Serve</span></span>
+                                </a>
+                                <h4 class="fw-bold text-dark mb-2">Welcome Back</h4>
+                                <p class="text-muted small">Login to access your support dashboard</p>
+                            </div>
+                            
+                            <form id="loginForm" class="needs-validation" novalidate>
+                                <div class="alert alert-danger d-none" id="loginError"></div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+                                        <input type="email" class="form-control border-start-0 ps-0" id="loginEmail" required>
+                                    </div>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <label class="form-label small fw-bold mb-0">Password</label>
+                                        <a href="forgot-password.html" class="small text-decoration-none">Forgot Password?</a>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                                        <input type="password" class="form-control border-start-0 border-end-0 ps-0" id="loginPassword" required>
+                                        <span class="input-group-text bg-transparent border-start-0 toggle-password" style="cursor: pointer;">
+                                            <i class="bi bi-eye text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <div class="invalid-feedback">Please enter your password.</div>
+                                </div>
+                                
+                                <div class="mb-4 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label small" for="rememberMe">Remember me</label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm rounded-3">Log In</button>
+                            </form>
+                            
+                            <div class="text-center mt-4 pt-3 border-top">
+                                <p class="small text-muted mb-0">Don't have an account? <a href="signup.html" class="fw-bold text-decoration-none">Create Account</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('loginForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (!form.checkValidity()) {
+                    e.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+                
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                const errorAlert = document.getElementById('loginError');
+                
+                const result = loginUser(email, password);
+                if (result.success) {
+                    window.location.href = 'dashboard.html';
+                } else {
+                    errorAlert.innerText = result.message || 'Invalid email or password.';
+                    errorAlert.classList.remove('d-none');
+                }
+            });
+            
+            // Password toggle
+            document.querySelector('.toggle-password').addEventListener('click', function() {
+                const input = document.getElementById('loginPassword');
+                const icon = this.querySelector('i');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('bi-eye', 'bi-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('bi-eye-slash', 'bi-eye');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <section class="section-padding pt-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none">Blog</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cybersecurity</li>
+                        </ol>
+                    </nav>
+
+                    <h1 class="fw-bolder mb-4">10 Essential Cybersecurity Practices for Small Businesses in 2026</h1>
+                    
+                    <div class="d-flex align-items-center gap-4 mb-4 pb-4 border-bottom">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="rounded-circle" width="40" height="40" style="object-fit: cover;">
+                            <div>
+                                <h6 class="mb-0 fw-bold">David Chen</h6>
+                                <span class="small text-muted">Author</span>
+                            </div>
+                        </div>
+                        <div class="text-muted small">
+                            <i class="bi bi-calendar me-1"></i> Aug 24, 2026
+                        </div>
+                        <div class="text-muted small">
+                            <i class="bi bi-clock me-1"></i> 5 min read
+                        </div>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cybersecurity" class="img-fluid rounded-4 shadow-sm mb-5 w-100" style="height: 400px; object-fit: cover;">
+
+                    <div class="blog-content text-secondary fs-6" style="line-height: 1.8;">
+                        <p class="lead text-dark mb-4 fw-medium">Cyber threats are evolving rapidly. Small businesses are increasingly becoming the primary target for cybercriminals because they often lack the robust security infrastructure of large enterprises.</p>
+                        
+                        <p>In 2026, the landscape of digital threats has shifted. Ransomware attacks have become more sophisticated, utilizing AI to bypass traditional spam filters and firewalls. If your business hasn't updated its security protocols recently, you are at risk.</p>
+                        
+                        <h3 class="fw-bold text-dark mt-5 mb-3">1. Implement Zero Trust Architecture</h3>
+                        <p>The days of trusting anyone inside the network are gone. Zero Trust assumes that a breach has already happened or will happen. Every user and device must be verified every time they attempt to access network resources.</p>
+
+                        <h3 class="fw-bold text-dark mt-4 mb-3">2. Multi-Factor Authentication (MFA) is Mandatory</h3>
+                        <p>Passwords alone are no longer sufficient. Implementing MFA across all business applications—especially email and VPNs—blocks 99.9% of automated account compromise attacks.</p>
+
+                        <blockquote class="bg-primary bg-opacity-10 border-start border-primary border-4 p-4 my-5 rounded-end italic text-dark fw-medium">
+                            "60% of small companies that suffer a cyber attack are out of business within six months. Security is not an IT issue; it's a business survival issue."
+                        </blockquote>
+
+                        <h3 class="fw-bold text-dark mt-4 mb-3">3. Regular Employee Training</h3>
+                        <p>Human error remains the number one cause of data breaches. Conduct regular phishing simulations and security awareness training so your team knows how to identify suspicious emails and links.</p>
+
+                        <h3 class="fw-bold text-dark mt-4 mb-3">Conclusion</h3>
+                        <p>Cybersecurity is an ongoing process, not a one-time setup. By partnering with an experienced Managed IT Service provider, you can ensure your defenses are always up to date against the latest threats.</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top">
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-light text-secondary border">Cybersecurity</span>
+                            <span class="badge bg-light text-secondary border">Business</span>
+                            <span class="badge bg-light text-secondary border">IT Tips</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <span class="text-muted fw-bold small me-2 align-self-center">Share:</span>
+                            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="glass-card p-4 mb-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Author" class="rounded-circle mb-3" width="100" height="100" style="object-fit: cover;">
+                        <h5 class="fw-bold mb-1">David Chen</h5>
+                        <p class="text-primary small fw-medium mb-3">Security Expert</p>
+                        <p class="text-muted small mb-0">David helps businesses implement robust network security protocols to protect against modern cyber threats.</p>
+                    </div>
+                    
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="fw-bold mb-3 border-bottom pb-2">Related Articles</h5>
+                        <div class="d-flex gap-3 mb-3 pb-3 border-bottom">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
+                            <div>
+                                <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-dark text-decoration-none">The Hidden Costs of Cloud Migration</a></h6>
+                                <span class="text-muted" style="font-size: 0.75rem;">Jul 28, 2026</span>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
+                            <div>
+                                <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-dark text-decoration-none">Wi-Fi 7 vs Wi-Fi 6 for Business</a></h6>
+                                <span class="text-muted" style="font-size: 0.75rem;">Jul 10, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>

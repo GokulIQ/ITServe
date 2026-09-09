@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ITServe IT Support</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <script src="assets/js/app.js"></script>
+    <script>requireGuest();</script>
+</head>
+<body class="bg-surface position-relative">
+    <header id="site-header" aria-label="Main navigation"></header>
+    <main class="d-flex align-items-center min-vh-100 w-100">
+        <div class="container py-5"><div class="row justify-content-center"><div class="col-md-10 col-lg-8">
+            <section class="glass-card overflow-hidden rounded-4 border-0 shadow-lg"><div class="p-4 p-md-5">
+                <div class="text-center mb-4"><a class="navbar-brand d-inline-flex mb-3" href="index.html"><i class="bi bi-cpu text-primary fs-3" aria-hidden="true"></i><span class="fs-4 fw-bold text-dark">IT<span class="text-secondary">Serve</span></span></a><h1 class="h4 fw-bold text-dark mb-2">Create an Account</h1><p class="text-muted small">Register to access the IT support portal</p></div>
+                <form id="signupForm" class="needs-validation" novalidate>
+                    <div class="alert d-none" id="signupAlert" role="alert"></div>
+                    <div class="row g-3 mb-3"><div class="col-md-6"><label class="form-label small fw-bold" for="signupName">Full Name <span class="text-danger">*</span></label><input type="text" class="form-control" id="signupName" required><div class="invalid-feedback">Please enter your full name.</div></div><div class="col-md-6"><label class="form-label small fw-bold" for="signupCompany">Company Name</label><input type="text" class="form-control" id="signupCompany"></div></div>
+                    <div class="row g-3 mb-3"><div class="col-md-6"><label class="form-label small fw-bold" for="signupEmail">Email Address <span class="text-danger">*</span></label><input type="email" class="form-control" id="signupEmail" required><div class="invalid-feedback">Please enter a valid email address.</div></div><div class="col-md-6"><label class="form-label small fw-bold" for="signupMobile">Mobile Number <span class="text-danger">*</span></label><input type="tel" class="form-control" id="signupMobile" required pattern="[0-9]{10,15}"><div class="invalid-feedback">Please enter a valid mobile number.</div></div></div>
+                    <div class="row g-3 mb-4"><div class="col-md-6"><label class="form-label small fw-bold" for="signupPassword">Password <span class="text-danger">*</span></label><input type="password" class="form-control" id="signupPassword" required minlength="6"><div class="invalid-feedback">Password must be at least 6 characters.</div></div><div class="col-md-6"><label class="form-label small fw-bold" for="signupConfirm">Confirm Password <span class="text-danger">*</span></label><input type="password" class="form-control" id="signupConfirm" required minlength="6"><div class="invalid-feedback">Passwords do not match.</div></div></div>
+                    <div class="mb-4 form-check"><input type="checkbox" class="form-check-input" id="signupTerms" required><label class="form-check-label small" for="signupTerms">I agree to the Terms of Service and Privacy Policy.</label><div class="invalid-feedback">You must agree before submitting.</div></div>
+                    <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm rounded-3">Create Account</button>
+                </form>
+                <div class="text-center mt-4 pt-3 border-top"><p class="small text-muted mb-0">Already have an account? <a href="login.html" class="fw-bold text-decoration-none">Log In</a></p></div>
+            </div></section>
+        </div></div></div>
+    </main>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('signupForm');
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                const password = document.getElementById('signupPassword');
+                const confirmation = document.getElementById('signupConfirm');
+                confirmation.setCustomValidity(password.value === confirmation.value ? '' : 'Passwords do not match');
+                if (!form.checkValidity()) { form.classList.add('was-validated'); return; }
+                const result = registerUser({ fullName: document.getElementById('signupName').value, companyName: document.getElementById('signupCompany').value, email: document.getElementById('signupEmail').value, mobile: document.getElementById('signupMobile').value, password: password.value });
+                const alert = document.getElementById('signupAlert');
+                alert.className = `alert ${result.success ? 'alert-success' : 'alert-danger'}`;
+                alert.textContent = result.success ? 'Account created. Redirecting to login…' : result.message;
+                if (result.success) setTimeout(() => { window.location.href = 'login.html'; }, 1200);
+            });
+        });
+    </script>
+</body>
+</html>

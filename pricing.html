@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC Plans - IT Support & Computer AMC Service</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('itSupportTheme');
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <div id="preloader"><div class="spinner-pulse"></div></div>
+
+    <div id="site-header"></div>
+
+    <section class="bg-primary bg-opacity-10 py-5">
+        <div class="container py-4 text-center">
+            <h1 class="fw-bolder mb-3">Annual Maintenance Contracts</h1>
+            <p class="text-secondary mb-0">Affordable, reliable, and transparent pricing for your peace of mind.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-auto">
+                    <div class="glass-card p-1 rounded-pill d-inline-flex align-items-center">
+                        <button class="btn btn-primary rounded-pill px-4 fw-bold active" id="btnYearly">Yearly Plans</button>
+                        <button class="btn btn-transparent rounded-pill px-4 text-secondary fw-bold" id="btnMonthly">Monthly Plans</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Basic Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100 p-4 position-relative">
+                        <h4 class="fw-bold mb-1">Basic AMC</h4>
+                        <p class="text-muted small mb-4">Perfect for small homes/offices</p>
+                        
+                        <div class="mb-4">
+                            <span class="fs-1 fw-bolder text-primary price-display">₹2,999</span>
+                            <span class="text-muted small">/year</span>
+                        </div>
+                        
+                        <ul class="list-unstyled mb-4 text-secondary">
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Up to 5 Devices</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> 4 Physical Visits / Year</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Basic Remote Support</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Response Time: 24h</li>
+                            <li class="mb-3 d-flex gap-2 text-muted opacity-50"><i class="bi bi-x-lg"></i> Network Support</li>
+                            <li class="mb-3 d-flex gap-2 text-muted opacity-50"><i class="bi bi-x-lg"></i> Parts Included</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn btn-outline-primary w-100 fw-bold mt-auto">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100 p-4 position-relative border-primary border-2" style="transform: scale(1.05); z-index: 2;">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-primary rounded-pill px-3 py-2 fw-bold">Recommended</div>
+                        <h4 class="fw-bold mb-1">Business AMC</h4>
+                        <p class="text-muted small mb-4">Ideal for medium-sized businesses</p>
+                        
+                        <div class="mb-4">
+                            <span class="fs-1 fw-bolder text-primary price-display">₹7,999</span>
+                            <span class="text-muted small">/year</span>
+                        </div>
+                        
+                        <ul class="list-unstyled mb-4 text-secondary">
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Up to 25 Devices</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> 12 Physical Visits / Year</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Unlimited Remote Support</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Response Time: 4h</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Advanced Network Support</li>
+                            <li class="mb-3 d-flex gap-2 text-muted opacity-50"><i class="bi bi-x-lg"></i> Parts Included</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn btn-primary w-100 fw-bold mt-auto shadow-sm">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100 p-4 position-relative">
+                        <h4 class="fw-bold mb-1">Enterprise AMC</h4>
+                        <p class="text-muted small mb-4">For large corporate infrastructure</p>
+                        
+                        <div class="mb-4">
+                            <span class="fs-1 fw-bolder text-primary price-display">₹14,999</span>
+                            <span class="text-muted small">/year</span>
+                        </div>
+                        
+                        <ul class="list-unstyled mb-4 text-secondary">
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Unlimited Devices</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Unlimited Visits</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Dedicated Account Manager</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Response Time: 1h</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> 24/7 Server Monitoring</li>
+                            <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Basic Parts Included</li>
+                        </ul>
+                        
+                        <a href="contact.html" class="btn btn-outline-primary w-100 fw-bold mt-auto">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-surface py-4 text-center border-top mt-0">
+        <p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple mock toggle logic
+        document.getElementById('btnMonthly').addEventListener('click', function() {
+            this.classList.add('btn-primary', 'active');
+            this.classList.remove('btn-transparent', 'text-secondary');
+            document.getElementById('btnYearly').classList.remove('btn-primary', 'active');
+            document.getElementById('btnYearly').classList.add('btn-transparent', 'text-secondary');
+            
+            const prices = document.querySelectorAll('.price-display');
+            prices[0].innerText = '₹299';
+            prices[1].innerText = '₹799';
+            prices[2].innerText = '₹1,499';
+            document.querySelectorAll('.small.text-muted').forEach(el => {
+                if(el.innerText === '/year') el.innerText = '/month';
+            });
+        });
+        document.getElementById('btnYearly').addEventListener('click', function() {
+            this.classList.add('btn-primary', 'active');
+            this.classList.remove('btn-transparent', 'text-secondary');
+            document.getElementById('btnMonthly').classList.remove('btn-primary', 'active');
+            document.getElementById('btnMonthly').classList.add('btn-transparent', 'text-secondary');
+            
+            const prices = document.querySelectorAll('.price-display');
+            prices[0].innerText = '₹2,999';
+            prices[1].innerText = '₹7,999';
+            prices[2].innerText = '₹14,999';
+            document.querySelectorAll('.small.text-muted').forEach(el => {
+                if(el.innerText === '/month') el.innerText = '/year';
+            });
+        });
+    </script>
+    <script src="assets/js/Header.js"></script>
+</body>
+</html>
