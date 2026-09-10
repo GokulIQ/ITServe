@@ -150,9 +150,15 @@ function setTheme(theme) {
     // Update all theme toggle icons
     document.querySelectorAll('.theme-toggle').forEach(btn => {
         if (theme === 'dark') {
-            btn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+            btn.innerHTML = '<i class="bi bi-sun-fill" aria-hidden="true"></i>';
+            btn.setAttribute('aria-pressed', 'true');
+            btn.setAttribute('aria-label', 'Switch to light mode');
+            btn.setAttribute('title', 'Switch to light mode');
         } else {
-            btn.innerHTML = '<i class="bi bi-moon-fill"></i>';
+            btn.innerHTML = '<i class="bi bi-moon-fill" aria-hidden="true"></i>';
+            btn.setAttribute('aria-pressed', 'false');
+            btn.setAttribute('aria-label', 'Switch to dark mode');
+            btn.setAttribute('title', 'Switch to dark mode');
         }
     });
 }
@@ -231,9 +237,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem(APP_KEYS.THEME) || 'light';
     document.querySelectorAll('.theme-toggle').forEach(btn => {
         if (theme === 'dark') {
-            btn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+            btn.innerHTML = '<i class="bi bi-sun-fill" aria-hidden="true"></i>';
+            btn.setAttribute('aria-pressed', 'true');
+            btn.setAttribute('aria-label', 'Switch to light mode');
+            btn.setAttribute('title', 'Switch to light mode');
         } else {
-            btn.innerHTML = '<i class="bi bi-moon-fill"></i>';
+            btn.innerHTML = '<i class="bi bi-moon-fill" aria-hidden="true"></i>';
+            btn.setAttribute('aria-pressed', 'false');
+            btn.setAttribute('aria-label', 'Switch to dark mode');
+            btn.setAttribute('title', 'Switch to dark mode');
         }
     });
 

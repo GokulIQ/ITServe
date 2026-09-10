@@ -100,12 +100,6 @@
     content: "\f284"; /* chevron-left */
 }
 
-/* Authentication pages: Bootstrap's physical .end-0 utility is LTR-only. */
-[dir="rtl"] .auth-page-controls {
-    right: auto !important;
-    left: 0 !important;
-}
-
 /* Keep form icons on the reading-start side and preserve joined borders. */
 [dir="rtl"] .input-group {
     direction: rtl;
