@@ -474,6 +474,21 @@ body.has-fixed-header #site-header {
     margin-top: 3rem;
 }
 
+/* Keep the uptime card over the image rather than the Remote Support copy. */
+.hero-image .hero-uptime-badge {
+    top: 1.5rem;
+    right: auto;
+    bottom: auto !important;
+    left: -1.25rem !important;
+    z-index: 2;
+}
+@media (max-width: 991.98px) {
+    .hero-image .hero-uptime-badge {
+        left: 1rem !important;
+        margin: 0;
+    }
+}
+
 /* Badges */
 .badge-soft-primary { background-color: var(--primary-light); color: var(--primary-color); }
 .badge-soft-success { background-color: rgba(16, 185, 129, 0.1); color: var(--success-color); }
