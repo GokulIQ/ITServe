@@ -16,9 +16,9 @@ const MASTER_FOOTER_HTML = `
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <a class="navbar-brand d-inline-block mb-3" href="index.html">
+                <a class="navbar-brand footer-brand-logo d-inline-block mb-3" href="index.html" aria-label="ITServe home">
                     <i class="bi bi-cpu text-primary fs-3"></i>
-                    <span>IT<span class="text-secondary">Serve</span></span>
+                    <span>IT<span class="brand-serve">Serve</span></span>
                 </a>
                 <p class="text-secondary mb-4 pe-lg-4">Your trusted partner for comprehensive IT support, network solutions, and managed services. We keep your business running smoothly.</p>
                 <div class="d-flex gap-2">

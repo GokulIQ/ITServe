@@ -192,6 +192,78 @@ img {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+/* Primary actions in the Home 1 hero remain a balanced pair on small screens. */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: .8rem;
+}
+.hero-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    min-height: 3.35rem;
+    padding: .7rem 1.2rem;
+    border-radius: .8rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+.hero-actions .btn-outline-primary {
+    background: var(--surface-solid);
+}
+
+/* Contact-page map and its quick directions action. */
+.contact-map {
+    position: relative;
+    min-height: 25rem;
+    overflow: hidden;
+    background: var(--surface-solid);
+}
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 25rem;
+    border: 0;
+}
+.contact-map-link {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .7rem .95rem;
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: .7rem;
+    background: rgba(15, 23, 42, .86);
+    box-shadow: 0 .5rem 1.5rem rgba(15, 23, 42, .22);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    backdrop-filter: blur(.5rem);
+}
+.contact-map-link:hover,
+.contact-map-link:focus-visible { background: var(--primary-color); color: #fff; }
+[dir="rtl"] .contact-map-link { right: auto; left: 1rem; }
+
+@media (max-width: 575.98px) {
+    .hero-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .65rem;
+        width: 100%;
+    }
+    .hero-actions .btn {
+        min-width: 0;
+        min-height: 3.15rem;
+        padding: .65rem .45rem;
+        font-size: .9rem;
+        white-space: nowrap;
+    }
+}
+
 .btn-light-glass {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
@@ -373,6 +445,9 @@ body.has-fixed-header #site-header {
     padding-top: 4rem;
     padding-bottom: 0;
     margin-top: 4rem;
+}
+.footer .footer-brand-logo .brand-serve {
+    color: var(--text-secondary);
 }
 .footer-title {
     font-weight: 700;
