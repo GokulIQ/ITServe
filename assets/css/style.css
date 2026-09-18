@@ -58,11 +58,12 @@
     --bs-heading-color: var(--text-primary);
     --bs-border-color: var(--border-color);
     --bs-primary: var(--primary-color);
+    --bs-primary-rgb: 37, 99, 235;
 
 }
 
 /* Dark Mode Variables */
-[data-theme="dark"] {
+[data-bs-theme="dark"] {
     --bg-color: #0f172a;
     --surface-color: rgba(30, 41, 59, 0.75);
     --surface-solid: #1e293b;
@@ -84,6 +85,7 @@
     --bs-heading-color: var(--text-primary);
     --bs-border-color: var(--border-color);
     --bs-primary: var(--primary-color);
+    --bs-primary-rgb: 59, 130, 246;
 
 }
 
@@ -179,7 +181,7 @@ img {
 }
 
 .btn-outline-primary {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     border-color: var(--primary-color);
     border-radius: var(--radius-md);
     padding: 0.6rem 1.5rem;
@@ -188,7 +190,7 @@ img {
 
 .btn-outline-primary:hover {
     background-color: var(--primary-color);
-    color: #fff;
+    color: #fff !important;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
@@ -212,6 +214,7 @@ img {
 }
 .hero-actions .btn-outline-primary {
     background: var(--surface-solid);
+    color: var(--primary-color) !important;
 }
 
 /* Contact-page map and its quick directions action. */
@@ -271,7 +274,7 @@ img {
     border: 1px solid var(--glass-border);
 }
 
-[data-theme="dark"] .btn-light-glass {
+[data-bs-theme="dark"] .btn-light-glass {
     background: rgba(30, 41, 59, 0.5);
     color: #fff;
 }
@@ -295,13 +298,13 @@ img {
     box-shadow: 0 0 0 0.25rem var(--primary-light);
 }
 
-[data-theme="dark"] .form-control, [data-theme="dark"] .form-select {
+[data-bs-theme="dark"] .form-control, [data-bs-theme="dark"] .form-select {
     background-color: var(--surface-solid);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .form-control::placeholder {
+[data-bs-theme="dark"] .form-control::placeholder {
     color: var(--text-muted);
 }
 
@@ -312,6 +315,7 @@ img {
 .text-secondary { color: var(--text-secondary) !important; }
 .text-muted { color: var(--text-muted) !important; }
 .bg-primary { background-color: var(--primary-color) !important; }
+.bg-primary.bg-opacity-10 { background-color: var(--primary-light) !important; }
 .bg-light { background-color: var(--surface-solid) !important; }
 
 .section-padding { padding: 5rem 0; }
@@ -424,10 +428,10 @@ body.has-fixed-header #site-header {
 
 /* Bootstrap's default toggler artwork has a dark stroke. Supply a readable
    stroke when the shared navigation is displayed on a dark surface. */
-[data-theme="dark"] #site-header .navbar-toggler-icon {
+[data-bs-theme="dark"] #site-header .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23eef5ff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-[data-theme="dark"] #site-header .navbar-toggler:focus-visible {
+[data-bs-theme="dark"] #site-header .navbar-toggler:focus-visible {
     box-shadow: 0 0 0 .2rem rgba(59, 130, 246, .45);
 }
 
@@ -596,28 +600,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     box-shadow: none !important;
 }
 /* Dark Mode Form Controls */
-[data-theme="dark"] .form-control,
-[data-theme="dark"] .form-select,
-[data-theme="dark"] .input-group-text {
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] .input-group-text {
     background-color: var(--surface-solid);
     color: var(--text-primary);
     border-color: var(--border-color);
 }
-[data-theme="dark"] .form-control:focus,
-[data-theme="dark"] .form-select:focus {
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
     background-color: var(--surface-solid);
     color: var(--text-primary);
     border-color: var(--primary-color);
 }
-[data-theme="dark"] .form-control::placeholder {
+[data-bs-theme="dark"] .form-control::placeholder {
     color: var(--text-muted);
 }
 /* Fix text-dark utility in dark mode */
-[data-theme="dark"] .text-dark {
+[data-bs-theme="dark"] .text-dark {
     color: var(--text-primary) !important;
 }
-[data-theme="dark"] a.text-dark:hover,
-[data-theme="dark"] a.text-dark:focus {
+[data-bs-theme="dark"] a.text-dark:hover,
+[data-bs-theme="dark"] a.text-dark:focus {
     color: var(--primary-color) !important;
 }
 
@@ -627,7 +631,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
    ========================================================================== */
 
 /* --- Table Dark Mode --- */
-[data-theme="dark"] .table {
+[data-bs-theme="dark"] .table {
     --bs-table-bg: transparent;
     --bs-table-color: var(--text-primary);
     --bs-table-border-color: var(--border-color);
@@ -638,237 +642,517 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     border-color: var(--border-color);
 }
 
-[data-theme="dark"] .table > :not(caption) > * > * {
+[data-bs-theme="dark"] .table > :not(caption) > * > * {
     background-color: transparent;
     color: var(--text-primary);
     border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .table > thead {
+[data-bs-theme="dark"] .table > thead {
     border-bottom: 2px solid var(--border-color);
 }
 
 /* Override table-light in dark mode (used on <thead>) */
-[data-theme="dark"] .table-light {
+[data-bs-theme="dark"] .table-light {
     --bs-table-bg: rgba(255, 255, 255, 0.05) !important;
     --bs-table-color: var(--text-secondary) !important;
     --bs-table-border-color: var(--border-color) !important;
     color: var(--text-secondary) !important;
 }
 
-[data-theme="dark"] .table-light th,
-[data-theme="dark"] .table-light td {
+[data-bs-theme="dark"] .table-light th,
+[data-bs-theme="dark"] .table-light td {
     background-color: rgba(255, 255, 255, 0.05) !important;
     color: var(--text-secondary) !important;
 }
 
 /* Table hover rows in dark mode */
-[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+[data-bs-theme="dark"] .table-hover > tbody > tr:hover > * {
     background-color: rgba(255, 255, 255, 0.05) !important;
     color: var(--text-primary) !important;
 }
 
 /* --- bg-light & bg-white overrides --- */
-[data-theme="dark"] .bg-light {
+[data-bs-theme="dark"] .bg-light {
     background-color: var(--surface-solid) !important;
 }
 
-[data-theme="dark"] .bg-white {
+[data-bs-theme="dark"] .bg-white {
     background-color: var(--surface-solid) !important;
 }
 
 /* --- btn-light override (action buttons) --- */
-[data-theme="dark"] .btn-light {
+[data-bs-theme="dark"] .btn-light {
     background-color: var(--surface-solid) !important;
     border-color: var(--border-color) !important;
     color: var(--text-primary) !important;
 }
 
-[data-theme="dark"] .btn-light:hover {
+[data-bs-theme="dark"] .btn-light:hover {
     background-color: var(--border-color) !important;
     color: var(--text-primary) !important;
 }
 
 /* --- Modal Dark Mode --- */
-[data-theme="dark"] .modal-content {
+[data-bs-theme="dark"] .modal-content {
     background-color: var(--surface-solid);
     color: var(--text-primary);
     border-color: var(--border-color);
 }
 
-[data-theme="dark"] .modal-header {
+[data-bs-theme="dark"] .modal-header {
     border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .modal-footer {
+[data-bs-theme="dark"] .modal-footer {
     border-top-color: var(--border-color);
 }
 
-[data-theme="dark"] .modal-header .btn-close {
+[data-bs-theme="dark"] .modal-header .btn-close {
     filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 /* --- Card Dark Mode --- */
-[data-theme="dark"] .card {
+[data-bs-theme="dark"] .card {
     background-color: var(--surface-solid);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .card-header {
+[data-bs-theme="dark"] .card-header {
     background-color: rgba(255, 255, 255, 0.03);
     border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .card-footer {
+[data-bs-theme="dark"] .card-footer {
     background-color: rgba(255, 255, 255, 0.03);
     border-top-color: var(--border-color);
 }
 
 /* --- Border overrides --- */
-[data-theme="dark"] .border-bottom,
-[data-theme="dark"] .border-top,
-[data-theme="dark"] .border {
+[data-bs-theme="dark"] .border-bottom,
+[data-bs-theme="dark"] .border-top,
+[data-bs-theme="dark"] .border {
     border-color: var(--border-color) !important;
 }
 
 /* --- Dropdown Dark Mode --- */
-[data-theme="dark"] .dropdown-menu {
+[data-bs-theme="dark"] .dropdown-menu {
     background-color: var(--surface-solid);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .dropdown-item {
+[data-bs-theme="dark"] .dropdown-item {
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .dropdown-item:hover,
-[data-theme="dark"] .dropdown-item:focus {
+[data-bs-theme="dark"] .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-item:focus {
     background-color: rgba(255, 255, 255, 0.08);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .dropdown-divider {
+[data-bs-theme="dark"] .dropdown-divider {
     border-top-color: var(--border-color);
 }
 
 /* --- Pagination Dark Mode --- */
-[data-theme="dark"] .page-link {
+[data-bs-theme="dark"] .page-link {
     background-color: var(--surface-solid);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .page-link:hover {
+[data-bs-theme="dark"] .page-link:hover {
     background-color: var(--border-color);
     color: var(--text-primary);
 }
 
-[data-theme="dark"] .page-item.active .page-link {
+[data-bs-theme="dark"] .page-item.active .page-link {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: #fff;
 }
 
-[data-theme="dark"] .page-item.disabled .page-link {
+[data-bs-theme="dark"] .page-item.disabled .page-link {
     background-color: rgba(255, 255, 255, 0.03);
     border-color: var(--border-color);
     color: var(--text-muted);
 }
 
 /* --- bg-opacity sections (hero banners) --- */
-[data-theme="dark"] .bg-primary.bg-opacity-10 {
-    background-color: rgba(59, 130, 246, 0.15) !important;
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 {
+    background-color: var(--surface-solid) !important;
+    border-bottom: 1px solid var(--border-color);
 }
 
-[data-theme="dark"] .bg-primary.bg-opacity-10 h1,
-[data-theme="dark"] .bg-primary.bg-opacity-10 h2,
-[data-theme="dark"] .bg-primary.bg-opacity-10 h3,
-[data-theme="dark"] .bg-primary.bg-opacity-10 p {
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 h1,
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 h2,
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 h3,
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 p {
     color: var(--text-primary) !important;
 }
 
-[data-theme="dark"] .bg-primary.bg-opacity-10 .text-secondary {
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 .text-secondary {
     color: var(--text-secondary) !important;
 }
 
 /* --- List group Dark Mode --- */
-[data-theme="dark"] .list-group-item {
+[data-bs-theme="dark"] .list-group-item {
     background-color: var(--surface-solid);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
 
 /* --- Input group addon text --- */
-[data-theme="dark"] .input-group-text {
+[data-bs-theme="dark"] .input-group-text {
     background-color: var(--surface-solid) !important;
     border-color: var(--border-color) !important;
     color: var(--text-muted) !important;
 }
 
 /* --- Chart Box (dashboard containers) --- */
-[data-theme="dark"] .chart-box {
+[data-bs-theme="dark"] .chart-box {
     background: var(--surface-solid);
     border-color: var(--border-color);
 }
 
 /* --- Sidebar text-dark fixes for dashboard --- */
-[data-theme="dark"] .sidebar .text-dark,
-[data-theme="dark"] .sidebar .fw-bold.text-dark {
+[data-bs-theme="dark"] .sidebar .text-dark,
+[data-bs-theme="dark"] .sidebar .fw-bold.text-dark {
     color: var(--text-primary) !important;
 }
 
 /* --- Contact page specific: glass-card background --- */
-[data-theme="dark"] .glass-card {
+[data-bs-theme="dark"] .glass-card {
     background: var(--surface-color);
     border-color: var(--border-color);
 }
 
 /* --- Contact page icon boxes --- */
-[data-theme="dark"] .bg-primary-light {
+[data-bs-theme="dark"] .bg-primary-light {
     background-color: var(--primary-light) !important;
 }
 
 /* --- form-label visibility --- */
-[data-theme="dark"] .form-label {
+[data-bs-theme="dark"] .form-label {
     color: var(--text-primary);
 }
 
 /* --- Breadcrumb dark mode --- */
-[data-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
+[data-bs-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
     color: var(--text-muted);
 }
-[data-theme="dark"] .breadcrumb-item.active {
+[data-bs-theme="dark"] .breadcrumb-item.active {
     color: var(--text-secondary);
 }
 
 /* --- Toast dark mode --- */
-[data-theme="dark"] .toast {
+[data-bs-theme="dark"] .toast {
     background-color: var(--surface-solid);
     color: var(--text-primary);
     border-color: var(--border-color);
 }
 
 /* --- text-body override --- */
-[data-theme="dark"] .text-body {
+[data-bs-theme="dark"] .text-body {
     color: var(--text-primary) !important;
 }
 
 /* --- Accordion --- */
-[data-theme="dark"] .accordion-item {
+[data-bs-theme="dark"] .accordion-item {
     background-color: var(--surface-solid);
     border-color: var(--border-color);
     color: var(--text-primary);
 }
-[data-theme="dark"] .accordion-button {
+[data-bs-theme="dark"] .accordion-button {
     background-color: var(--surface-solid);
     color: var(--text-primary);
 }
-[data-theme="dark"] .accordion-button:not(.collapsed) {
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
     background-color: var(--primary-light);
     color: var(--primary-color);
 }
-[data-theme="dark"] .accordion-button::after {
+[data-bs-theme="dark"] .accordion-button::after {
     filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
+
+/* ==========================================================================
+   COMPREHENSIVE DARK MODE OVERRIDES
+   Fixes all Bootstrap utility classes that don't respect dark theme
+   ========================================================================== */
+
+/* --- Table Dark Mode --- */
+[data-bs-theme="dark"] .table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text-primary);
+    --bs-table-border-color: var(--border-color);
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.03);
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.05);
+    --bs-table-hover-color: var(--text-primary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-bs-theme="dark"] .table > :not(caption) > * > * {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+}
+
+[data-bs-theme="dark"] .table > thead {
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Override table-light in dark mode (used on <thead>) */
+[data-bs-theme="dark"] .table-light {
+    --bs-table-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-color: var(--text-secondary) !important;
+    --bs-table-border-color: var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+[data-bs-theme="dark"] .table-light th,
+[data-bs-theme="dark"] .table-light td {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* Table hover rows in dark mode */
+[data-bs-theme="dark"] .table-hover > tbody > tr:hover > * {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-primary) !important;
+}
+
+/* --- bg-light & bg-white overrides --- */
+[data-bs-theme="dark"] .bg-light {
+    background-color: var(--surface-solid) !important;
+}
+
+[data-bs-theme="dark"] .bg-white {
+    background-color: var(--surface-solid) !important;
+}
+
+/* --- btn-light override (action buttons) --- */
+[data-bs-theme="dark"] .btn-light {
+    background-color: var(--surface-solid) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-bs-theme="dark"] .btn-light:hover {
+    background-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* --- Modal Dark Mode --- */
+[data-bs-theme="dark"] .modal-content {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-bs-theme="dark"] .modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+[data-bs-theme="dark"] .modal-footer {
+    border-top-color: var(--border-color);
+}
+
+[data-bs-theme="dark"] .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* --- Card Dark Mode --- */
+[data-bs-theme="dark"] .card {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom-color: var(--border-color);
+}
+
+[data-bs-theme="dark"] .card-footer {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top-color: var(--border-color);
+}
+
+/* --- Border overrides --- */
+[data-bs-theme="dark"] .border-bottom,
+[data-bs-theme="dark"] .border-top,
+[data-bs-theme="dark"] .border {
+    border-color: var(--border-color) !important;
+}
+
+/* --- Dropdown Dark Mode --- */
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .dropdown-divider {
+    border-top-color: var(--border-color);
+}
+
+/* --- Pagination Dark Mode --- */
+[data-bs-theme="dark"] .page-link {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .page-link:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .page-item.disabled .page-link {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+/* --- bg-opacity sections (hero banners) --- */
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 h1,
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 h2,
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 h3,
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 p {
+    color: var(--text-primary) !important;
+}
+
+[data-bs-theme="dark"] .bg-primary.bg-opacity-10 .text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+/* --- List group Dark Mode --- */
+[data-bs-theme="dark"] .list-group-item {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* --- Input group addon text --- */
+[data-bs-theme="dark"] .input-group-text {
+    background-color: var(--surface-solid) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-muted) !important;
+}
+
+/* --- Chart Box (dashboard containers) --- */
+[data-bs-theme="dark"] .chart-box {
+    background: var(--surface-solid);
+    border-color: var(--border-color);
+}
+
+/* --- Sidebar text-dark fixes for dashboard --- */
+[data-bs-theme="dark"] .sidebar .text-dark,
+[data-bs-theme="dark"] .sidebar .fw-bold.text-dark {
+    color: var(--text-primary) !important;
+}
+
+/* --- Contact page specific: glass-card background --- */
+[data-bs-theme="dark"] .glass-card {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+/* --- Contact page icon boxes --- */
+[data-bs-theme="dark"] .bg-primary-light {
+    background-color: var(--primary-light) !important;
+}
+
+/* --- form-label visibility --- */
+[data-bs-theme="dark"] .form-label {
+    color: var(--text-primary);
+}
+
+/* --- Breadcrumb dark mode --- */
+[data-bs-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--text-muted);
+}
+[data-bs-theme="dark"] .breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* --- Toast dark mode --- */
+[data-bs-theme="dark"] .toast {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* --- text-body override --- */
+[data-bs-theme="dark"] .text-body {
+    color: var(--text-primary) !important;
+}
+
+/* --- Accordion --- */
+[data-bs-theme="dark"] .accordion-item {
+    background-color: var(--surface-solid);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+[data-bs-theme="dark"] .accordion-button {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+}
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+[data-bs-theme="dark"] .accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+/* Dark Mode Form Controls */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] .input-group-text {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: var(--surface-solid);
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+}
+[data-bs-theme="dark"] .form-control::placeholder {
+    color: var(--text-muted);
+}
+/* Fix text-dark utility in dark mode */
+[data-bs-theme="dark"] .text-dark {
+    color: var(--text-primary) !important;
+}
+[data-bs-theme="dark"] a.text-dark:hover,
+[data-bs-theme="dark"] a.text-dark:focus {
+    color: var(--primary-color) !important;
 }

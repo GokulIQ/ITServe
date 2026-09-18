@@ -52,7 +52,7 @@ function renderDashboardLayout(mainContentHTML, pageId = 'dashboard') {
         </aside>
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content d-flex flex-column min-vh-100">
             <!-- Top Header -->
             <header class="dash-header d-flex justify-content-between align-items-center shadow-sm">
                 <div class="d-flex align-items-center">
@@ -86,7 +86,7 @@ function renderDashboardLayout(mainContentHTML, pageId = 'dashboard') {
             </header>
             
             <!-- Page Specific Content -->
-            <div class="p-4 p-md-5">
+            <div class="p-4 p-md-5 flex-grow-1">
                 ${mainContentHTML}
             </div>
         </main>
@@ -97,6 +97,12 @@ function renderDashboardLayout(mainContentHTML, pageId = 'dashboard') {
     `;
 
     document.getElementById('app-layout').innerHTML = layoutHTML;
+
+    // Move the global footer into the main content area so it doesn't overlap the sidebar
+    const globalFooter = document.querySelector('footer');
+    if (globalFooter) {
+        document.querySelector('.main-content').appendChild(globalFooter);
+    }
 
     // Bind Layout Events
     document.getElementById('sidebarToggle').addEventListener('click', () => {

@@ -12,8 +12,15 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     
     <script>
-        const savedTheme = localStorage.getItem('itSupportTheme');
-        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        (function() {
+            const savedTheme = localStorage.getItem('itserve_theme') || localStorage.getItem('itSupportTheme');
+            if (savedTheme === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark');
+            const isRTL = localStorage.getItem('itserve_direction') === 'rtl' || (!localStorage.getItem('itserve_direction') && localStorage.getItem('itSupportRTL') === 'true');
+            if (isRTL) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            }
+        })();
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
 </head>
@@ -43,7 +50,7 @@
             <div class="row g-4 justify-content-center">
                 <!-- Basic Plan -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4 position-relative">
+                    <div class="glass-card h-100 p-4 position-relative d-flex flex-column">
                         <h4 class="fw-bold mb-1">Basic AMC</h4>
                         <p class="text-muted small mb-4">Perfect for small homes/offices</p>
                         
@@ -52,7 +59,7 @@
                             <span class="text-muted small">/year</span>
                         </div>
                         
-                        <ul class="list-unstyled mb-4 text-secondary">
+                        <ul class="list-unstyled mb-4 text-secondary flex-grow-1">
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Up to 5 Devices</li>
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> 4 Physical Visits / Year</li>
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Basic Remote Support</li>
@@ -67,7 +74,7 @@
 
                 <!-- Business Plan -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4 position-relative border-primary border-2" style="transform: scale(1.05); z-index: 2;">
+                    <div class="glass-card h-100 p-4 position-relative border-primary border-2 d-flex flex-column">
                         <div class="position-absolute top-0 start-50 translate-middle badge bg-primary rounded-pill px-3 py-2 fw-bold">Recommended</div>
                         <h4 class="fw-bold mb-1">Business AMC</h4>
                         <p class="text-muted small mb-4">Ideal for medium-sized businesses</p>
@@ -77,7 +84,7 @@
                             <span class="text-muted small">/year</span>
                         </div>
                         
-                        <ul class="list-unstyled mb-4 text-secondary">
+                        <ul class="list-unstyled mb-4 text-secondary flex-grow-1">
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Up to 25 Devices</li>
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> 12 Physical Visits / Year</li>
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Unlimited Remote Support</li>
@@ -92,7 +99,7 @@
 
                 <!-- Enterprise Plan -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100 p-4 position-relative">
+                    <div class="glass-card h-100 p-4 position-relative d-flex flex-column">
                         <h4 class="fw-bold mb-1">Enterprise AMC</h4>
                         <p class="text-muted small mb-4">For large corporate infrastructure</p>
                         
@@ -101,7 +108,7 @@
                             <span class="text-muted small">/year</span>
                         </div>
                         
-                        <ul class="list-unstyled mb-4 text-secondary">
+                        <ul class="list-unstyled mb-4 text-secondary flex-grow-1">
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Unlimited Devices</li>
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Unlimited Visits</li>
                             <li class="mb-3 d-flex gap-2"><i class="bi bi-check-lg text-success"></i> Dedicated Account Manager</li>
@@ -111,6 +118,112 @@
                         </ul>
                         
                         <a href="contact.html" class="btn btn-outline-primary w-100 fw-bold mt-auto">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our AMC -->
+    <section class="section-padding bg-surface">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Why Choose Our AMC Services?</h2>
+                <p class="text-secondary">We ensure your IT infrastructure runs smoothly so you can focus on your business.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="glass-card p-4 h-100">
+                        <div class="text-primary mb-3"><i class="bi bi-shield-check" style="font-size: 3rem;"></i></div>
+                        <h5 class="fw-bold">Preventive Maintenance</h5>
+                        <p class="text-secondary small">Regular check-ups to identify and fix issues before they cause downtime.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="glass-card p-4 h-100">
+                        <div class="text-primary mb-3"><i class="bi bi-lightning-charge" style="font-size: 3rem;"></i></div>
+                        <h5 class="fw-bold">Fast Response Times</h5>
+                        <p class="text-secondary small">Priority support with guaranteed response times based on your chosen plan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="glass-card p-4 h-100">
+                        <div class="text-primary mb-3"><i class="bi bi-person-badge" style="font-size: 3rem;"></i></div>
+                        <h5 class="fw-bold">Expert Technicians</h5>
+                        <p class="text-secondary small">Certified professionals with years of experience handling diverse IT environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Frequently Asked Questions</h2>
+                <p class="text-secondary">Have questions about our AMC plans? Find answers here.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="amcFAQ">
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What does the AMC cover?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#amcFAQ">
+                                <div class="accordion-body text-secondary">
+                                    Our AMC covers regular preventive maintenance, software troubleshooting, hardware diagnostics, and remote support. Parts replacement is included only in specific higher-tier plans.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Can I upgrade my plan later?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#amcFAQ">
+                                <div class="accordion-body text-secondary">
+                                    Yes, you can upgrade your plan at any time. We will prorate the remaining amount of your current plan towards the new upgrade.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card mb-3 border-0">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How quickly will you respond to an issue?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#amcFAQ">
+                                <div class="accordion-body text-secondary">
+                                    Response times vary by plan. Basic plans have a 24-hour response time, while Enterprise plans enjoy a rapid 1-hour response time.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-10"></div>
+        <div class="container position-relative z-1 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="glass-card p-5 text-center rounded-4 shadow-sm border border-light border-opacity-25">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-4" style="width: 80px; height: 80px;">
+                            <i class="bi bi-headset fs-1"></i>
+                        </div>
+                        <h2 class="fw-bolder mb-3 display-6">Need a Custom Plan?</h2>
+                        <p class="text-secondary mb-4 fs-5">Don&#39;t see a plan that fits your exact needs? Our engineers can create a customized AMC package tailored specifically for your business infrastructure.</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm">
+                            <i class="bi bi-chat-dots me-2"></i>Contact Us Today
+                        </a>
                     </div>
                 </div>
             </div>
@@ -163,3 +276,4 @@
     <script src="assets/js/Header.js"></script>
 </body>
 </html>
+

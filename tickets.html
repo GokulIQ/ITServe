@@ -14,6 +14,17 @@
     <script>requireAuth();</script>
     <script src="assets/js/db.js"></script>
     <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('itserve_theme') || localStorage.getItem('itSupportTheme');
+            if (savedTheme === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark');
+            const isRTL = localStorage.getItem('itserve_direction') === 'rtl' || (!localStorage.getItem('itserve_direction') && localStorage.getItem('itSupportRTL') === 'true');
+            if (isRTL) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            }
+        })();
+    </script>
 </head>
 <body>
     <div id="app-layout"></div>

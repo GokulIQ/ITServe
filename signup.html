@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     <script src="assets/js/app.js"></script>
     <script>requireGuest();</script>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('itserve_theme') || localStorage.getItem('itSupportTheme');
+            if (savedTheme === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark');
+            const isRTL = localStorage.getItem('itserve_direction') === 'rtl' || (!localStorage.getItem('itserve_direction') && localStorage.getItem('itSupportRTL') === 'true');
+            if (isRTL) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            }
+        })();
+    </script>
 </head>
 <body class="bg-surface position-relative">
     <header id="site-header" aria-label="Main navigation"></header>

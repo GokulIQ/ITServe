@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!serviceId || !servicesData[serviceId]) {
         // Handle Invalid / Missing ID gracefully
         document.getElementById("sd-hero-title").innerText = "Service Not Found";
-        document.getElementById("sd-breadcrumb").innerText = "Not Found";
+        if (document.getElementById("sd-breadcrumb")) { document.getElementById("sd-breadcrumb").innerText = "Not Found"; }
         
         mainContent.innerHTML = `
             <div class="text-center py-5">
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Populate Data
     document.title = service.title + " - ITServe";
     document.getElementById("sd-hero-title").innerText = service.heroTitle;
-    document.getElementById("sd-breadcrumb").innerText = service.title;
+    if (document.getElementById("sd-breadcrumb")) { document.getElementById("sd-breadcrumb").innerText = service.title; }
     
     document.getElementById("sd-title").innerText = service.title;
     document.getElementById("sd-description").innerHTML = service.description;
@@ -385,3 +385,4 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     });
 });
+

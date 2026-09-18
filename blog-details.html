@@ -12,8 +12,15 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     
     <script>
-        const savedTheme = localStorage.getItem('itSupportTheme');
-        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        (function() {
+            const savedTheme = localStorage.getItem('itserve_theme') || localStorage.getItem('itSupportTheme');
+            if (savedTheme === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark');
+            const isRTL = localStorage.getItem('itserve_direction') === 'rtl' || (!localStorage.getItem('itserve_direction') && localStorage.getItem('itSupportRTL') === 'true');
+            if (isRTL) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            }
+        })();
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
 </head>
@@ -27,13 +34,7 @@
             <div class="row g-5">
                 <!-- Main Content -->
                 <div class="col-lg-8">
-                    <nav aria-label="breadcrumb" class="mb-4">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-                            <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none">Blog</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Cybersecurity</li>
-                        </ol>
-                    </nav>
+                    
 
                     <h1 class="fw-bolder mb-4">10 Essential Cybersecurity Practices for Small Businesses in 2026</h1>
                     
@@ -85,7 +86,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <span class="text-muted fw-bold small me-2 align-self-center">Share:</span>
-                            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                            <a aria-label="Twitter" href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter-x"></i></a>
                             <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-linkedin"></i></a>
                             <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-facebook"></i></a>
                         </div>
@@ -104,14 +105,14 @@
                     <div class="glass-card p-4 mb-4">
                         <h5 class="fw-bold mb-3 border-bottom pb-2">Related Articles</h5>
                         <div class="d-flex gap-3 mb-3 pb-3 border-bottom">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
+                            <img alt="" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
                             <div>
                                 <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-dark text-decoration-none">The Hidden Costs of Cloud Migration</a></h6>
                                 <span class="text-muted" style="font-size: 0.75rem;">Jul 28, 2026</span>
                             </div>
                         </div>
                         <div class="d-flex gap-3">
-                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
+                            <img alt="" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="rounded" width="60" height="60" style="object-fit: cover;">
                             <div>
                                 <h6 class="mb-1 small fw-bold"><a href="blog-details.html" class="text-dark text-decoration-none">Wi-Fi 7 vs Wi-Fi 6 for Business</a></h6>
                                 <span class="text-muted" style="font-size: 0.75rem;">Jul 10, 2026</span>
@@ -138,3 +139,4 @@
     <script src="assets/js/Header.js"></script>
 </body>
 </html>
+

@@ -12,8 +12,15 @@
     <link rel="stylesheet" href="assets/css/rtl.css">
     
     <script>
-        const savedTheme = localStorage.getItem('itSupportTheme');
-        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        (function() {
+            const savedTheme = localStorage.getItem('itserve_theme') || localStorage.getItem('itSupportTheme');
+            if (savedTheme === 'dark') document.documentElement.setAttribute('data-bs-theme', 'dark');
+            const isRTL = localStorage.getItem('itserve_direction') === 'rtl' || (!localStorage.getItem('itserve_direction') && localStorage.getItem('itSupportRTL') === 'true');
+            if (isRTL) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            }
+        })();
     </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3E%3Cpath d='M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z'/%3E%3C/svg%3E">
 </head>
@@ -23,16 +30,10 @@
     <div id="site-header"></div>
 
     <!-- Page Header -->
-    <section class="bg-primary bg-opacity-10 py-5">
+    <section class="bg-primary text-white py-5">
         <div class="container py-4 text-center">
             <h1 class="fw-bolder mb-3" id="sd-hero-title">Service Details</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-                    <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none">Services</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" id="sd-breadcrumb">Service Details</li>
-                </ol>
-            </nav>
+            
         </div>
     </section>
 
@@ -113,3 +114,4 @@
     <script src="assets/js/Header.js"></script>
 </body>
 </html>
+

@@ -82,7 +82,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .navbar-brand span {
         font-size: 1.25rem;
     }

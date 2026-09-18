@@ -48,7 +48,7 @@ const MASTER_FOOTER_HTML = `
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom text-center"><p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved. Designed for IT Professionals.</p></div>
+        <div class="footer-bottom text-center"><p class="text-muted mb-0 small">&copy; 2026 ITServe. All rights reserved. </p></div>
     </div>
 </footer>`;
 
@@ -141,9 +141,9 @@ function loadTheme() {
 
 function setTheme(theme) {
     if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
     } else {
-        document.documentElement.removeAttribute('data-theme');
+        document.documentElement.removeAttribute('data-bs-theme');
     }
     localStorage.setItem(APP_KEYS.THEME, theme);
     
