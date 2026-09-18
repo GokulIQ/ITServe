@@ -6,7 +6,7 @@
     const isAuthPage = ['login.html', 'register.html', 'signup.html'].includes(currentPath);
     const preferenceControls = `
         <button class="theme-toggle nav-icon-button" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><i class="bi bi-moon-fill" aria-hidden="true"></i></button>
-        <button class="rtl-toggle rtl-control" type="button" aria-label="Switch page direction to right-to-left" aria-pressed="false" title="Switch page direction (LTR / RTL)"><i class="bi bi-text-right rtl-direction-icon" aria-hidden="true"></i><span>RTL</span></button>`;
+        <button class="rtl-toggle rtl-control" type="button" aria-label="Switch page direction to right-to-left" aria-pressed="false" title="Switch page direction (LTR / RTL)"><span>RTL</span></button>`;
 
     const headerHTML = `
         <div class="bg-primary text-white py-2 d-none d-lg-block">

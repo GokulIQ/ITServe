@@ -197,10 +197,9 @@ function syncDirectionControls() {
             control.setAttribute('aria-pressed', String(isRTL));
             control.setAttribute('aria-label', isRTL ? 'Switch page direction to left-to-right' : 'Switch page direction to right-to-left');
             control.setAttribute('title', isRTL ? 'Switch page direction to LTR' : 'Switch page direction to RTL');
-            const directionIcon = control.querySelector('.rtl-direction-icon');
-            if (directionIcon) {
-                directionIcon.classList.toggle('bi-text-left', isRTL);
-                directionIcon.classList.toggle('bi-text-right', !isRTL);
+            const textSpan = control.querySelector('span');
+            if (textSpan) {
+                textSpan.innerText = isRTL ? 'LTR' : 'RTL';
             }
         }
     });

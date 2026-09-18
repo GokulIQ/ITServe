@@ -61,7 +61,7 @@ function renderDashboardLayout(mainContentHTML, pageId = 'dashboard') {
                 </div>
                 
                 <div class="d-flex align-items-center gap-3">
-                    <button class="rtl-toggle rtl-control" type="button" aria-label="Switch page direction to right-to-left" aria-pressed="false" title="Switch page direction (LTR / RTL)"><i class="bi bi-text-right rtl-direction-icon" aria-hidden="true"></i><span>RTL</span></button>
+                    <button class="rtl-toggle rtl-control" type="button" aria-label="Switch page direction to right-to-left" aria-pressed="false" title="Switch page direction (LTR / RTL)"><span>RTL</span></button>
                     <button class="btn btn-light rounded-circle theme-toggle p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" title="Toggle Theme">
                         <i class="bi bi-moon-fill"></i>
                     </button>
