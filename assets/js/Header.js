@@ -39,6 +39,7 @@
                     </ul>
                     <div class="nav-actions d-flex align-items-center flex-wrap gap-2 mt-3 mt-lg-0">
                         <span class="d-none d-lg-flex align-items-center gap-2">${preferenceControls}</span>
+                        <a href="dashboard.html" class="nav-link fw-bold unauth-dash-link"><i class="bi bi-speedometer2 me-1" aria-hidden="true"></i>Dashboard</a>
                         <a href="login.html" class="nav-link fw-bold auth-link nav-auth-link"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i>Login</a>
                         <a href="signup.html" class="btn btn-primary shadow-sm signup-link"><i class="bi bi-person-plus me-1" aria-hidden="true"></i>Sign Up</a>
                     </div>
