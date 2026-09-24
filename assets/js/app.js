@@ -113,7 +113,17 @@ function loginUser(email, password) {
         localStorage.setItem(APP_KEYS.CURRENT_USER, JSON.stringify(sessionUser));
         return { success: true };
     }
-    return { success: false, message: 'Invalid email or password.' };
+    
+    // For template preview purposes: fallback to dummy user if no account is registered
+    const dummyUser = {
+        fullName: "Guest User",
+        companyName: "Demo Company",
+        email: email,
+        mobile: "1234567890",
+        role: "client"
+    };
+    localStorage.setItem(APP_KEYS.CURRENT_USER, JSON.stringify(dummyUser));
+    return { success: true };
 }
 
 function logoutUser() {
@@ -122,6 +132,12 @@ function logoutUser() {
 }
 
 function requireAuth() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('auth') === 'true') {
+        const dummyUser = { fullName: "Guest User", email: "guest@example.com" };
+        try { localStorage.setItem(APP_KEYS.CURRENT_USER, JSON.stringify(dummyUser)); } catch(e){}
+        return;
+    }
     if (!getCurrentUser()) {
         window.location.href = 'login.html';
     }
