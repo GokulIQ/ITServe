@@ -265,16 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     
-    // Update UI if logged in (for public pages)
     const currentUser = getCurrentUser();
-    if(currentUser) {
-        document.querySelectorAll('.auth-link').forEach(link => {
-            link.innerHTML = '<i class="bi bi-person-circle me-1"></i> Dashboard';
-            link.href = 'dashboard.html';
-        });
-        document.querySelectorAll('.signup-link').forEach(link => link.classList.add('d-none'));
-        document.querySelectorAll('.unauth-dash-link').forEach(link => link.classList.add('d-none'));
-    }
 
     // Bind all theme toggles
     document.querySelectorAll('.theme-toggle').forEach(btn => {
@@ -296,18 +287,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Replace old storage keys data to prevent conflicts if needed
     // (Optional but good for clean state)
     // Dummy login handler for unauth-dash-link
-    document.querySelectorAll('.unauth-dash-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const dummyUser = {
-                fullName: "Guest User",
-                companyName: "Demo Company",
-                email: "guest@example.com",
-                role: "client"
-            };
-            localStorage.setItem(APP_KEYS.CURRENT_USER, JSON.stringify(dummyUser));
-            window.location.href = this.href;
+    if (!currentUser) {
+        document.querySelectorAll('.unauth-dash-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dummyUser = {
+                    fullName: "Guest User",
+                    companyName: "Demo Company",
+                    email: "guest@example.com",
+                    role: "client"
+                };
+                localStorage.setItem(APP_KEYS.CURRENT_USER, JSON.stringify(dummyUser));
+                window.location.href = this.href;
+            });
         });
-    });
+    }
 
 });

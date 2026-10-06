@@ -79,16 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderDashboardLayout(mainContent, 'dashboard');
     
-    // Welcome message override
+    // Use a consistent welcome heading for every authenticated dashboard user.
     const dashPageTitle = document.getElementById('dashPageTitle');
-    const user = getCurrentUser();
-    if (dashPageTitle && user) {
-        const hours = new Date().getHours();
-        let greeting = 'Good evening';
-        if (hours < 12) greeting = 'Good morning';
-        else if (hours < 18) greeting = 'Good afternoon';
-        dashPageTitle.innerText = `${greeting}, ${user.fullName.split(' ')[0]}`;
-    }
+    if (dashPageTitle) dashPageTitle.innerText = 'Welcome Back';
 
     loadDashboardData();
 });

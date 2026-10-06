@@ -68,12 +68,12 @@ const servicesData = {
         price: "₹2,999/year",
         duration: "Annual Contract",
         availability: "Available Now",
-        description: "<p class='text-secondary mb-4'>Our Annual Maintenance Contracts (AMC) provide peace of mind through preventive maintenance, hardware inspections, software updates, and continuous system health monitoring. With unlimited support and scheduled maintenance, we keep your business IT infrastructure secure and efficient.</p>",
+        description: "<p class='text-secondary mb-4'>A Computer Annual Maintenance Contract (AMC) gives your business a planned schedule for keeping desktops, laptops, and essential IT equipment dependable. We begin with an inventory and health review, then provide scheduled preventive maintenance, hardware diagnostics, operating system and software updates, and support requests through the year.</p><p class='text-secondary mb-4'>When a fault occurs, our team troubleshoots hardware and software, investigates virus or malware symptoms, and helps restore network and Wi-Fi connectivity. Support starts remotely where practical; when hands-on work is required, we arrange an on-site visit. Replacement parts and any exclusions are confirmed in the agreed plan before work begins.</p>",
         features: [
-            "Preventive & Scheduled Maintenance",
-            "Hardware & Software Inspections",
-            "System Health Monitoring",
-            "Unlimited Priority Support"
+            "Scheduled preventive maintenance and cleaning",
+            "Hardware diagnostics and software troubleshooting",
+            "System health, updates, and security checks",
+            "Remote help with on-site visits as agreed"
         ],
         benefits: [
             "Predictable IT maintenance costs",
@@ -82,14 +82,15 @@ const servicesData = {
             "Continuous security and performance updates"
         ],
         process: [
-            { step: "1", title: "Infrastructure Audit", desc: "Initial assessment of your IT setup." },
-            { step: "2", title: "Contract Customization", desc: "Tailoring the AMC to suit your business needs." },
-            { step: "3", title: "Scheduled Visits", desc: "Regular check-ups and preventive maintenance." },
-            { step: "4", title: "On-demand Support", desc: "Rapid response to any unexpected IT problems." }
+            { step: "1", title: "Review your setup", desc: "Inventory devices, understand users and business priorities, and check current system health." },
+            { step: "2", title: "Agree the scope", desc: "Set covered devices, scheduled visits, response targets, exclusions, and parts arrangements in writing." },
+            { step: "3", title: "Maintain proactively", desc: "Complete planned health checks, cleaning, updates, and preventive maintenance." },
+            { step: "4", title: "Log and resolve issues", desc: "Contact the support team; we triage remotely first and arrange an on-site engineer when needed." }
         ],
         faq: [
-            { q: "What is included in the AMC?", a: "Our AMC covers preventive maintenance, routine check-ups, unlimited remote support, and priority on-site visits." },
-            { q: "Are replacement parts included?", a: "Standard AMCs cover service and maintenance; replacement hardware parts are usually billed separately." }
+            { q: "What is included in the AMC?", a: "Coverage depends on the agreed plan and device list. Typical services include scheduled preventive maintenance, system health checks, software troubleshooting, hardware diagnostics, and remote support. On-site visits and response targets are defined in your quotation." },
+            { q: "Are replacement parts included?", a: "Parts are included only when explicitly listed in the selected plan. Otherwise, we explain the fault and provide a parts and labor quote before proceeding." },
+            { q: "Can you help with malware or network problems?", a: "Yes. We can investigate virus or malware symptoms, assist with cleanup and security updates, and troubleshoot common LAN and Wi-Fi connectivity issues within the agreed support scope." }
         ]
     },
     "network-setup": {
@@ -161,12 +162,12 @@ const servicesData = {
         price: "₹999/month",
         duration: "24/7 Support",
         availability: "Available Now",
-        description: "<p class='text-secondary mb-4'>We offer round-the-clock IT helpdesk and emergency troubleshooting. Whether it's remote assistance, system monitoring, software support, or business IT consulting, our dedicated team is always available to ensure your operations never stop.</p>",
+        description: "<p class='text-secondary mb-4'>Get practical help for the computers and services your team depends on. Our IT support covers desktop and laptop hardware faults, operating system and application errors, slow or unstable systems, email and printer issues, and routine troubleshooting.</p><p class='text-secondary mb-4'>We also help diagnose LAN, Wi-Fi, and internet connectivity problems and investigate virus or malware symptoms. A support request is triaged by impact; straightforward issues are handled remotely with your approval, while repairs that need physical access are scheduled on-site. Response targets and coverage depend on the selected service plan.</p>",
         features: [
-            "24/7 Remote & On-site Support",
-            "Emergency Troubleshooting",
-            "Continuous System Monitoring",
-            "Comprehensive Hardware & Software Assistance"
+            "Desktop, laptop, and peripheral troubleshooting",
+            "Operating system and business software support",
+            "Network, Wi-Fi, and connectivity diagnosis",
+            "Remote assistance and arranged on-site repairs"
         ],
         benefits: [
             "Immediate resolution of critical IT issues",
