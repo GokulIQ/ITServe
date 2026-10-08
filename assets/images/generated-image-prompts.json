@@ -1,0 +1,51 @@
+{
+  "generator": "Built-in image_gen",
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "encoding": "JPEG quality 88; original dimensions preserved",
+  "images": [
+    {
+      "id": "computer-repair",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT service website card and matching detail-page main image. Create one polished editorial photograph, landscape 1536x1024, realistic equipment and anatomy, natural daylight with restrained navy and blue accents. Keep the key subject centered with generous surrounding space so a wide 2:1 center crop still communicates the service. No text, lettering, logos, watermarks, collages or decorative borders. Close-up three-quarter view of a technician's hands carefully installing a RAM module inside an open office desktop PC laid on an antistatic workbench. Visible motherboard, cooling fan, screwdriver and spare SSD. A professional repair bench, real physical diagnostics and hardware upgrade, crisp component detail, softly blurred office background.",
+      "file": "assets/images/home-2/computer-repair.jpg"
+    },
+    {
+      "id": "annual-maintenance",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT service website card and matching detail-page main image. Create one polished editorial photograph, landscape 1536x1024, realistic equipment and anatomy, natural daylight with restrained navy and blue accents. Keep the key subject centered with generous surrounding space so a wide 2:1 center crop still communicates the service. No text, lettering, logos, watermarks, collages or decorative borders. A professional IT technician carrying out scheduled preventative maintenance in a bright small-business office with a row of desktop workstations. The technician checks one computer with a diagnostic tablet beside it and a compact cleaning kit on the desk; several well-organized computers visible behind. Convey routine cleaning, health checks and care of multiple office devices.",
+      "file": "assets/images/home-2/annual-maintenance.jpg"
+    },
+    {
+      "id": "cybersecurity",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT service website card and matching detail-page main image. Create one polished editorial photograph, landscape 1536x1024, realistic equipment and anatomy, natural daylight with restrained navy and blue accents. Keep the key subject centered with generous surrounding space so a wide 2:1 center crop still communicates the service. No text, lettering, logos, watermarks, collages or decorative borders. Over-the-shoulder close view of a security support analyst investigating malware on an office computer. The main monitor shows a simple abstract endpoint security interface: a clear shield symbol, a few isolated amber alert tiles transitioning to green checks, no readable text. Analyst's hand on mouse, second laptop, calm realistic office atmosphere. Show practical computer security investigation, not a hooded hacker or floating hologram.",
+      "file": "assets/images/home-2/cybersecurity.jpg"
+    },
+    {
+      "id": "network-setup",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT service website card and matching detail-page main image. Create one polished editorial photograph, landscape 1536x1024, realistic equipment and anatomy, natural daylight with restrained navy and blue accents. Keep the key subject centered with generous surrounding space so a wide 2:1 center crop still communicates the service. No text, lettering, logos, watermarks, collages or decorative borders. Close editorial photograph of a network engineer's hands plugging a blue Ethernet cable into a real rack-mounted switch in a tidy small-office network cabinet. Neat blue and gray patch cables, port status lights, compact router, and a white Wi-Fi access point on nearby workbench visible in the composition. Realistic structured cabling and physical connectivity work, sharp center subject.",
+      "file": "assets/images/home-2/network-setup.jpg"
+    },
+    {
+      "id": "remote-support",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT service website card and matching detail-page main image. Create one polished editorial photograph, landscape 1536x1024, realistic equipment and anatomy, natural daylight with restrained navy and blue accents. Keep the key subject centered with generous surrounding space so a wide 2:1 center crop still communicates the service. No text, lettering, logos, watermarks, collages or decorative borders. A friendly professional IT support engineer wearing a headset with microphone at a bright office desk, three-quarter side view, assisting a remote user. Monitor in the center shows an abstract remote desktop window with a settings panel and a small video-call thumbnail, no legible text; a desktop printer sits nearby. Calm focused expression, hand on mouse, realistic software troubleshooting session, not hardware repair.",
+      "file": "assets/images/home-2/remote-support.jpg"
+    },
+    {
+      "id": "data-backup",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT service website card and matching detail-page main image. Create one polished editorial photograph, landscape 1536x1024, realistic equipment and anatomy, natural daylight with restrained navy and blue accents. Keep the key subject centered with generous surrounding space so a wide 2:1 center crop still communicates the service. No text, lettering, logos, watermarks, collages or decorative borders. Close editorial photograph of a business data backup and restoration workspace: compact four-bay NAS with green status lights, a portable backup drive connected to an open laptop. Laptop screen displays a simple abstract backup interface with folder icons, circular restore arrow and completed progress bar, no readable text. Technician's hand near the laptop touchpad, organized desk in a bright office, tangible storage equipment prominent.",
+      "file": "assets/images/home-2/data-backup.jpg"
+    },
+    {
+      "id": "home1-support",
+      "prompt": "Use case: photorealistic-natural. Asset type: IT support homepage hero. Create one landscape 1536x1024 editorial photograph of a female IT helpdesk professional wearing a headset in a warm modern office, helping a business user via her laptop. Three-quarter view with the professional and laptop centered, abstract troubleshooting window on screen, softly blurred desks in background. Natural warm daylight, restrained blue and gray palette, realistic anatomy and equipment. Compose for a wide center crop, no lettering, no logos, no watermark, no collage.",
+      "editPrompt": "Edit the laptop only: its lid faces the camera, so make the entire outside back of the laptop lid a plain matte dark gray surface with absolutely no display, graphics, symbols, windows, or logo on it. Preserve the woman, her headset, hands, pose, office, lighting, framing, and every other element exactly. Keep landscape 1536x1024.",
+      "file": "assets/images/home-1/support.jpg"
+    },
+    {
+      "id": "home1-device-care",
+      "prompt": "Use case: photorealistic-natural. Asset type: homepage annual computer maintenance feature photograph. Create one landscape 1536x1024 editorial photograph of a technician in a light blue shirt checking an office desktop's vents and cooling system with a small soft cleaning brush at a tidy desk, with keyboard, mouse, and monitor displaying a simple abstract green device health indicator. Side view, central composition, realistic hardware, inviting warm daylight, calm professional office. Distinct scene of preventative computer care. No text, lettering, logos, watermark or collage.",
+      "file": "assets/images/home-1/device-care.jpg"
+    }
+  ]
+}

@@ -38,7 +38,7 @@
                         <li class="nav-item"><a class="nav-link ${isActive('contact.html')}" href="contact.html">Contact</a></li>
                         <li class="nav-item"><a href="dashboard.html" class="nav-link fw-bold unauth-dash-link ${isActive('dashboard.html')}">Dashboard</a></li>
                     </ul>
-                    <div class="nav-actions d-flex align-items-center flex-wrap gap-2 mt-3 mt-lg-0">
+                    <div class="nav-actions d-flex align-items-center flex-wrap flex-lg-nowrap gap-2 mt-3 mt-lg-0">
                         <span class="d-none d-lg-flex align-items-center gap-2">${preferenceControls}</span>
                         <a href="login.html" class="nav-link fw-bold auth-link nav-auth-link">Login</a>
                         <a href="signup.html" class="btn btn-primary shadow-sm signup-link">Sign Up</a>

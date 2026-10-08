@@ -388,6 +388,21 @@ img {
     color: var(--text-primary) !important;
     padding: 0.5rem 1rem !important;
     transition: color var(--transition-fast);
+    white-space: nowrap;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav {
+        gap: 0 !important;
+    }
+    .navbar-nav .nav-link {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 0.95rem;
+    }
+    .nav-actions {
+        gap: 0.5rem !important;
+    }
 }
 .nav-link:hover, .nav-link.active {
     color: var(--primary-color) !important;

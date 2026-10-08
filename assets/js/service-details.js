@@ -2,7 +2,7 @@ const servicesData = {
     "computer-repair": {
         title: "Computer Repair",
         heroTitle: "Expert Computer Repair Services",
-        image: "assets/images/Computer Repair.jpg",
+        image: "assets/images/home-2/computer-repair.jpg",
         price: "₹499",
         duration: "1–6 Hours",
         availability: "Available Now",
@@ -64,7 +64,7 @@ const servicesData = {
     "annual-maintenance": {
         title: "Annual Maintenance (AMC)",
         heroTitle: "Comprehensive AMC Contracts",
-        image: "assets/images/Annual Maintenance (AMC).jpg",
+        image: "assets/images/home-2/annual-maintenance.jpg",
         price: "₹2,999/year",
         duration: "Annual Contract",
         availability: "Available Now",
@@ -96,7 +96,7 @@ const servicesData = {
     "network-setup": {
         title: "Network Setup & Troubleshooting",
         heroTitle: "Reliable Network Infrastructure",
-        image: "assets/images/Network Setup.jpg",
+        image: "assets/images/home-2/network-setup.jpg",
         price: "₹1,499",
         duration: "2–24 Hours",
         availability: "Available Now",
@@ -189,7 +189,7 @@ const servicesData = {
     "data-backup": {
         title: "Data Backup & Recovery",
         heroTitle: "Secure Your Critical Data",
-        image: "assets/images/Data Backup & Recovery.jpg",
+        image: "assets/images/home-2/data-backup.jpg",
         price: "₹1,999",
         duration: "Varies",
         availability: "Available Now",
@@ -209,7 +209,7 @@ const servicesData = {
     "cybersecurity": {
         title: "Cybersecurity Support",
         heroTitle: "Protect Your Digital Assets",
-        image: "assets/images/Cybersecurity Support.jpg",
+        image: "assets/images/home-2/cybersecurity.jpg",
         price: "₹999",
         duration: "Varies",
         availability: "Available Now",
@@ -229,7 +229,7 @@ const servicesData = {
     "remote-support": {
         title: "Remote IT Support",
         heroTitle: "Instant Remote Assistance",
-        image: "assets/images/Remote IT Support.jpg",
+        image: "assets/images/home-2/remote-support.jpg",
         price: "₹299",
         duration: "Immediate",
         availability: "Available Now",
