@@ -549,6 +549,94 @@ body.has-fixed-header #site-header {
     background-color: var(--border-color);
 }
 
+/* Contact FAQs and authentication provider icons */
+.contact-faq-list {
+    display: grid;
+    gap: 1rem;
+}
+.contact-faq-item {
+    background: var(--surface-solid);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+.contact-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+.contact-faq-item summary::-webkit-details-marker { display: none; }
+.contact-faq-item summary::after {
+    content: '+';
+    flex-shrink: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+.contact-faq-item[open] summary {
+    background: var(--primary-light);
+}
+.contact-faq-item[open] summary::after { content: '\2212'; }
+.contact-faq-item summary:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -4px;
+}
+.contact-faq-answer {
+    padding: 1.25rem;
+    color: var(--text-secondary);
+}
+.contact-faq-answer p { margin: 0; }
+#contactForm { scroll-margin-top: calc(var(--site-header-height, 120px) + 1.5rem); }
+.auth-social-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+.auth-social-divider::before,
+.auth-social-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+.auth-social-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.auth-social-button {
+    display: flex;
+    flex: 1 1 80px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-height: 76px;
+    max-width: 160px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--surface-solid);
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+.auth-social-button i { font-size: 1.4rem; }
+.auth-social-button .bi-google,
+.auth-social-button .bi-facebook { color: var(--primary-color); }
+.auth-social-button .bi-apple { color: var(--text-primary); }
+.auth-social-button:disabled { cursor: not-allowed; }
+
 /* Shared public navigation controls */
 .nav-actions { gap: 0.5rem; }
 .mobile-header-controls {

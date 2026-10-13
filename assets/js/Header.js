@@ -40,8 +40,8 @@
                     </ul>
                     <div class="nav-actions d-flex align-items-center flex-wrap flex-lg-nowrap gap-2 mt-3 mt-lg-0">
                         <span class="d-none d-lg-flex align-items-center gap-2">${preferenceControls}</span>
-                        <a href="login.html" class="nav-link fw-bold auth-link nav-auth-link">Login</a>
-                        <a href="signup.html" class="btn btn-primary shadow-sm signup-link">Sign Up</a>
+                        <a href="signup.html" class="nav-link fw-bold signup-link">Sign Up</a>
+                        <a href="contact.html" class="btn btn-primary shadow-sm text-nowrap">Get IT Support</a>
                     </div>
                 </div>
             </div>
