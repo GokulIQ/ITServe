@@ -22,9 +22,9 @@ const MASTER_FOOTER_HTML = `
                 </a>
                 <p class="text-secondary mb-4 pe-lg-4">Your trusted partner for comprehensive IT support, network solutions, and managed services. We keep your business running smoothly.</p>
                 <div class="d-flex gap-2">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/" target="_self" aria-label="Facebook" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    <a href="https://x.com/" target="_self" aria-label="X" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/" target="_self" aria-label="LinkedIn" class="btn btn-sm btn-outline-primary rounded-circle" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
